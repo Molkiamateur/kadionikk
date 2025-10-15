@@ -1,0 +1,8 @@
+MIDlet-1: Hello,,hello.Hello
+MIDlet-Jar-Size: 1306
+MIDlet-Jar-URL: Hello.jar
+MIDlet-Name: Hello
+MIDlet-Vendor: se02
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0

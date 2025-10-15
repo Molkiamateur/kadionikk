@@ -1,0 +1,10 @@
+MIDlet-1: TstBpListen,,tstbplisten.TstBpListen
+MIDlet-Jar-Size: 2595
+MIDlet-Jar-URL: TstBpListen.jar
+MIDlet-Name: TstBpListen
+MIDlet-Permission-1: jdk.dio.DeviceMgmtPermission "*:*" "open"
+MIDlet-Permission-2: jdk.dio.gpio.GPIOPinPermission "*:*" "open"
+MIDlet-Vendor: kadionik
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0

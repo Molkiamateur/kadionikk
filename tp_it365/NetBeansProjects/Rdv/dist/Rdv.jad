@@ -1,0 +1,8 @@
+MIDlet-1: Rdv,,rdv.Rdv
+MIDlet-Jar-Size: 4588
+MIDlet-Jar-URL: Rdv.jar
+MIDlet-Name: Rdv
+MIDlet-Vendor: kadionik
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0
