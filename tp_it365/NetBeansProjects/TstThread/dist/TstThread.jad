@@ -1,0 +1,8 @@
+MIDlet-1: TstThread,,tstthread.TstThread
+MIDlet-Jar-Size: 3753
+MIDlet-Jar-URL: TstThread.jar
+MIDlet-Name: TstThread
+MIDlet-Vendor: kadionik
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0

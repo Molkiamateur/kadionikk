@@ -1,0 +1,10 @@
+MIDlet-1: TstLCD,,tstlcd.TstLCD
+MIDlet-Jar-Size: 5992
+MIDlet-Jar-URL: TstLCD.jar
+MIDlet-Name: TstLCD
+MIDlet-Permission-1: jdk.dio.DeviceMgmtPermission "*:*" "open"
+MIDlet-Permission-2: jdk.dio.i2cbus.I2CPermission "*:*" "open"
+MIDlet-Vendor: kadionik
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0

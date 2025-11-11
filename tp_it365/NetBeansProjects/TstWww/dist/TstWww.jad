@@ -1,0 +1,9 @@
+MIDlet-1: TstWww,,tstwww.TstWww
+MIDlet-Jar-Size: 3425
+MIDlet-Jar-URL: TstWww.jar
+MIDlet-Name: TstWww
+MIDlet-Permission-1: javax.microedition.io.SocketProtocolPermission "socket://:*"
+MIDlet-Vendor: kadionik
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.8
+MicroEdition-Profile: MEEP-8.0
