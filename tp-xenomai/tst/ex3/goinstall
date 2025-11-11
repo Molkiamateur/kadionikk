@@ -1,0 +1,2 @@
+\cp main ../../ramdisk/root_fs/bin/
+\cp main /tftpboot/

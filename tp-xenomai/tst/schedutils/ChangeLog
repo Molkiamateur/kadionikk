@@ -1,0 +1,91 @@
+2001-12-17  noselasd  <noselasd@LabSrv>
+
+        * /cvsroot/schedutils/schedutils/configure.in, /cvsroot/schedutils/schedutils/Makefile.in:
+        Use LIBS and LDFLAGS correctly.
+        use chmod instead of install --mode=
+
+
+2001-12-16  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/README: Updated for Solaris
+
+	* /cvsroot/schedutils/schedutils/isnumber.c, /cvsroot/schedutils/schedutils/sched.c:
+	Support ANSI C
+
+	* /cvsroot/schedutils/schedutils/configure.in, /cvsroot/schedutils/schedutils/Makefile.in:
+	Support Solaris. Check for LN_S, sched.h
+	Need to bail out if they fails though..
+
+	* /cvsroot/schedutils/schedutils/TODO: Fixed typo
+
+2001-10-10  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/util.c:
+	Added missing return statement.
+
+2001-08-26  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/util.c, /cvsroot/schedutils/schedutils/util.h:
+	Removed unused code, made  better implementation of schedstring(..)
+
+2001-08-06  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/isnumber.c, /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/TODO, /cvsroot/schedutils/schedutils/util.h:
+	Fixed small typos, added licence to isnumber.c and util. Update the TODO
+	and README file for the next release.
+
+2001-07-30  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/Makefile.in, /cvsroot/schedutils/schedutils/sched.8:
+	Fixed typos.
+
+2001-07-23  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/TODO:
+	bumped version number, revised TODO items
+
+2001-07-21  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/Makefile.in, /cvsroot/schedutils/schedutils/sched.8:
+	Added a man page.
+
+	* /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/Makefile.in, /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/resched.c, /cvsroot/schedutils/schedutils/sched.c:
+	getsched takes several pids now, fixed typos and error messsages.
+	getsched should be installed with mode 'x' to everyone.
+
+2001-07-17  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/isnumber.c, /cvsroot/schedutils/schedutils/isnumber.h, /cvsroot/schedutils/schedutils/Makefile.in, /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/resched.c, /cvsroot/schedutils/schedutils/sched.c, /cvsroot/schedutils/schedutils/TODO, /cvsroot/schedutils/schedutils/util.c:
+	Added todo files, isnumber(..).
+
+2001-07-08  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/Makefile.in, /cvsroot/schedutils/schedutils/sched.c:
+	Added sched , which runs a program under a diffrent sheduler/priority.
+
+2001-07-06  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/util.c:
+	Minor fixes
+
+	* /cvsroot/schedutils/schedutils/resched.c:
+	Implemented the command line switches.
+
+2001-07-05  Nils Olav Selåsdal  <noselasd@space.fiane.intra>
+
+	* /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/resched.c, /cvsroot/schedutils/schedutils/util.c, /cvsroot/schedutils/schedutils/util.h:
+	initial
+
+	* /cvsroot/schedutils/schedutils/README, /cvsroot/schedutils/schedutils/resched.c, /cvsroot/schedutils/schedutils/util.c, /cvsroot/schedutils/schedutils/util.h:
+	New file.
+
+	* /cvsroot/schedutils/schedutils/install-sh: initial
+
+	* /cvsroot/schedutils/schedutils/install-sh: New file.
+
+	* /cvsroot/schedutils/schedutils/config.h.in, /cvsroot/schedutils/schedutils/configure.in, /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/Makefile.in:
+	initial
+
+	* /cvsroot/schedutils/schedutils/config.h.in, /cvsroot/schedutils/schedutils/configure.in, /cvsroot/schedutils/schedutils/getsched.c, /cvsroot/schedutils/schedutils/Makefile.in:
+	New file.
+

@@ -1,0 +1,33 @@
+schedutils - 0.7.1
+Read the license in the source files.
+http://sourceforge.net/projects/schedutils
+----------------------------------
+
+What is schedutils?
+--------------------
+
+Schedutils is a collection of tools related to realtime scheduling,
+working much like 'nice' and 'renice', except they change the priority
+and scheduler.This enables a process to run in soft realtime, as
+specified by POSIX1.1b.
+the tools are
+        getsched - prints out current scheduler/priority for a process/PID
+        resched  - changes the scheduler/priority for a process/PID
+        sched    - executes a program with another scheduler/priority.
+
+How do I install schedutils?
+----------------------------
+Run the configure script with the appropriate parameters, run
+./configure --help to see what's available.
+then run make to compile the programs, and run make install
+to install it(as root).
+
+* note for Solaris users: if autoconf doesnt figure out that libposix4
+is needed, so before running configure, the LDFLAGS need to be set to
+posix4, e.g 'LDFLAGS=posix4 ./configure'
+
+There's also a make uninstall to uninstall the programs.
+
+
+Author:	Nils O.Selåsdal<NOS@Utel.no>
+

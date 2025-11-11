@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#include "bcm2835.h"
+#include "bcm2835.c"
+#include "bsp.h"
+#include "bsp.c"
+
+int main()
+{
+  int dir;
+  int i;
+  BSP_init();
+  dir = 0;
+  while(1){
+
+    if(dir == 0){
+      BSP_clrLED(6);
+      BSP_setLED(5);
+	usleep(50000);
+      BSP_clrLED(5);
+      BSP_setLED(4);
+	usleep(50000);
+      BSP_clrLED(4);
+      BSP_setLED(3);
+	usleep(50000);
+      BSP_clrLED(3);
+      BSP_setLED(2);
+	usleep(50000);
+      BSP_clrLED(2);
+      BSP_setLED(1);
+	usleep(50000);
+      dir = 1;
+    } else if(dir == 1){
+      BSP_clrLED(1);
+      BSP_setLED(2);
+	usleep(50000);	
+      BSP_clrLED(2);
+      BSP_setLED(3);
+	usleep(50000);
+      BSP_clrLED(3);
+      BSP_setLED(4);
+	usleep(50000);
+      BSP_clrLED(4);
+      BSP_setLED(5);
+	usleep(50000);
+      BSP_clrLED(5);
+      BSP_setLED(6);
+	usleep(50000);
+      dir = 0;
+    }
+    usleep(50000);
+  }
+}	

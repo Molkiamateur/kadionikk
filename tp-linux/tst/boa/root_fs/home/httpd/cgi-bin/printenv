@@ -1,0 +1,17 @@
+#!/bin/sh
+#@(#) pk/enseirb/2018
+
+echo "HTTP/1.0 200 OK"
+echo  "Content-type: text/html"
+echo
+
+echo "<HTML><HEAD><TITLE>CGI printenv</TITLE></HEAD>"
+
+echo "<BODY BGCOLOR="#99cc99">"
+echo "<CENTER><H1>CGI printenv</CENTER></H1>"
+echo "<PRE>"
+set
+echo "</PRE>"
+echo "</BODY>"
+echo "</HTML>"
+

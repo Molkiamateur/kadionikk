@@ -1,0 +1,1 @@
+CC=arm-buildroot-linux-gnueabihf-gcc CFLAGS="-march=armv7-a -mfloat-abi=hard" LDFLAGS="-march=armv7-a" ./configure --host=arm-buildroot-linux-gnueabihf
