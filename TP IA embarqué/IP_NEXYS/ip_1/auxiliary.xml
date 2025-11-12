@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="model_nexys_hls4ml_prj_1" xd:componentRef="model_nexys_hls4ml_prj_1" xd:initiationInterval="91257" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="input_1[0]" xd:originalName="input_10" xd:direction="in" xd:interfaceRef="input_1_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:dataPack="true" xd:bitMapping="15:0" xd:arraySize="1"/>
+  <xd:arg xd:name="input_1[1]" xd:originalName="input_11" xd:direction="in" xd:interfaceRef="input_1_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:dataPack="true" xd:bitMapping="31:16" xd:arraySize="1"/>
+  <xd:arg xd:name="layer13_out[0]" xd:originalName="layer13_out0" xd:direction="out" xd:interfaceRef="layer13_out_0_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="14" xd:firstOut="3" xd:arraySize="1"/>
+  <xd:arg xd:name="const_size_in_1" xd:originalName="const_size_in_1" xd:direction="out" xd:interfaceRef="const_size_in_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
+  <xd:arg xd:name="const_size_out_1" xd:originalName="const_size_out_1" xd:direction="out" xd:interfaceRef="const_size_out_1" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
+  <xd:latencyEstimates xd:best-case="91252" xd:worst-case="91256" xd:average-case="91252"/>
+  <xd:resourceEstimates xd:LUT="39153" xd:FF="34158" xd:BRAM="30" xd:DSP="27"/>
+</xd:acceleratorMap>

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Wed Oct 23 16:09:28 2024
+# Process ID: 68155
+# Current directory: /home/labo/IA_Projects/NEXYS-A7-AI/DNN_MODEL_3/model_nexys_pruned_5/model_nexys_hls4ml_prj_5/model_nexys_pruned_5_hls4ml_prj_5_prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/labo/IA_Projects/NEXYS-A7-AI/DNN_MODEL_3/model_nexys_pruned_5/model_nexys_hls4ml_prj_5/model_nexys_pruned_5_hls4ml_prj_5_prj/solution1/impl/ip/vivado.log
+# Journal file: /home/labo/IA_Projects/NEXYS-A7-AI/DNN_MODEL_3/model_nexys_pruned_5/model_nexys_hls4ml_prj_5/model_nexys_pruned_5_hls4ml_prj_5_prj/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/labo/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 23 16:10:05 2024...
