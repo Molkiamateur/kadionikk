@@ -150,7 +150,7 @@ print(' \
 #############################################\n \
     ')
 import hls4ml
-cconfig = hls4ml.utils.config_from_keras_model(keras_model, granularity='model')
+config = hls4ml.utils.config_from_keras_model(keras_model, granularity='model')
 config['Model']['Precision'] = 'ap_fixed<16,2>'
 config['Model']['ReuseFactor'] = 100
 config['Model']['Strategy'] = 'latency'
@@ -182,7 +182,7 @@ print(' \
     ')
 import hls4ml
 
-cconfig = hls4ml.utils.config_from_keras_model(keras_model, granularity='type')
+config = hls4ml.utils.config_from_keras_model(keras_model, granularity='type')
 config_cle = config['Model'].items()
 print(config_cle)
 # KERAS
