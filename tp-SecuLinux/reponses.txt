@@ -1,0 +1,36 @@
+python1 :
+
+Pour 'A': 
+
+[ 1391.474665] vuln1[14055]: segfault at 41414141 ip 0000000041414141 sp 00000000ffc23e80 error 14 likely on CPU 1 (core 1, socket 0)
+
+Pour 'B':
+
+[ 1541.811759] vuln1[15418]: segfault at 42424242 ip 0000000042424242 sp 00000000ff8b1620 error 14 likely on CPU 3 (core 3, socket 0)
+
+exo 5 : python2 test2
+
+[ 4044.855638] vuln1[36113]: segfault at 0 ip 00000000ffffd3a0 sp 00000000ffffd3a0 error 6 likely on CPU 5 (core 1, socket 0)
+
+=> hexadecimaux en little endian (tah a l'envers)
+
+
+exo 6 : tout dans le bash
+
+creation du pattern avec -l 300
+
+echo "pattern" |nc ip et port
+
+le message dmesg
+
+pattern offset avec le ip register
+
+exo 7: 
+
+bien penser à mettre des 0x90 entre ip_reg et le payload car 90 est l'opcode du NOP(No-operation), il permet de faire le saut dans les NOP donc executer le Payload du début(ici TCP).
+
+
+
+
+
+
