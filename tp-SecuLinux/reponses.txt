@@ -29,6 +29,37 @@ exo 7:
 
 bien penser à mettre des 0x90 entre ip_reg et le payload car 90 est l'opcode du NOP(No-operation), il permet de faire le saut dans les NOP donc executer le Payload du début(ici TCP).
 
+partie 3 :
+
+
+on cree l'arborescence de msf4, on modifie le ruby en ajoutant la cible (kali avec son reg sp) et 80, on choisit l'exploit qu'on veut puis mettre les variables de la cible(ip, port d'ecoute, et port du shell, payload). On execute exploit.
+
+
+
+exo 8 : 
+
+tout est pareil seulement on obtient une segfault car notre code n'a pas les droits de s'executer. ecrit dans le code d'erreur (erreur 15 au lieu de 14).
+
+exo 9 :
+
+on obtient stack smashing detected, cela signifie que l'on s'est fait cramé(il faut courrir très vite)
+
+exo 10: 
+
+en ayant l'aslr, le registre sp et random a chaque appel
+
+on observe que l'ecart est variable, mauvaise estimation de l'ecart donc on depasse la pile 
+
+0x1f21d : ecart moyen sur 100 calculs
+
+
+
+
+
+
+
+
+
 
 
 

