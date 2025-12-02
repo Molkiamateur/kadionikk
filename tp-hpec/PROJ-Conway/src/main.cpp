@@ -78,13 +78,13 @@ int main(int argc, char* argv[])
         if (argc>2) {
             nGens = atoi(argv[2]);
         }
-        printf("Outputing %d generations with kernel_%s\n", nGens, kernel_name[kernel_num]);
-        char dname[30] = "/tmp/glife/gen0001.pbm";
+        printf("Outputting %d generations with kernel_%s\n", nGens, kernel_name[kernel_num]);
+        char dname[30] = "./data/gen0001.pbm";
         for (int i=0; i<nGens; i++) {
-            dname[14] = i/1000      + '0';
-            dname[15] = (i/100)%10  + '0';
-            dname[16] = (i/10 )%10  + '0';
-            dname[17] =  i     %10  + '0';
+            dname[10] = (i/1000)%10 + '0';
+            dname[11] = (i/100)%10  + '0';
+            dname[12] = (i/10 )%10  + '0';
+            dname[13] =  i     %10  + '0';
             start.store(dname);
             start = kernels[kernel_num](start, 1);
         }

@@ -11,7 +11,7 @@ kernels = src/kernels/kernels.cpp \
 
 #the march and mtune options might not fully work
 #on some fancy ARM processors
-opts    = -Wall -march=native -mtune=native -Ofast -g0 -fopenmp
+opts    = -Wall -march=native -mtune=native -Ofast -g0 -fopenmp -pg
 cpuopts = -march=native -mtune=native
 
 glife : build $(objects)
