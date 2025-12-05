@@ -99,6 +99,8 @@ static inline uint64_t combine_neighbors_8(
 
     uint64_t N[8] = {n1,n2,n3,n4,n5,n6,n7,n8};
 
+    // On garde cette forme parce qu’elle se vectorise bien :
+    // pattern simple (AND/XOR/OR) sans branches ni dépendances cheloues.
     for (int i = 0; i < 8; ++i) {
         uint64_t x  = N[i];
         uint64_t c1 = s0 & x;
@@ -113,7 +115,10 @@ static inline uint64_t combine_neighbors_8(
 }
 
 // ======================================================================
-//  Noyau principal bit-parallèle optimisé (OpenMP: 1 région pour toutes les gens)
+//  Noyau principal bit-parallèle "extrême"
+//  - 1 seule région parallèle
+//  - unrolling manuel sur les mots 64 bits (factor 2)
+//  - même logique mais moins d’overhead par génération
 // ======================================================================
 
 frame conway_BitParallel(frame start, int gens) {
@@ -145,41 +150,122 @@ frame conway_BitParallel(frame start, int gens) {
 
             #pragma omp for schedule(static)
             for (int y = 0; y < h; ++y) {
-                const uint64_t* row_u = (y > 0)     ? &cur[(size_t)(y - 1) * words_per_row] : zero_row.data();
-                const uint64_t* row   =              &cur[(size_t) y      * words_per_row];
-                const uint64_t* row_d = (y + 1 < h) ? &cur[(size_t)(y + 1) * words_per_row] : zero_row.data();
+                const uint64_t* __restrict row_u =
+                    (y > 0) ? &cur[(size_t)(y - 1) * words_per_row]
+                            : zero_row.data();
+                const uint64_t* __restrict row =
+                    &cur[(size_t) y * words_per_row];
+                const uint64_t* __restrict row_d =
+                    (y + 1 < h) ? &cur[(size_t)(y + 1) * words_per_row]
+                                : zero_row.data();
 
-                uint64_t* dst = &next[(size_t) y * words_per_row];
+                uint64_t* __restrict dst =
+                    &next[(size_t) y * words_per_row];
 
-                // On traite chaque mot 64 bits de la ligne
-                for (int i = 0; i < words_per_row; ++i) {
+                int i = 0;
+                int limit2 = (words_per_row & ~1); // multiple de 2
 
+                // Unrolling factor 2 : on traite 2 mots 64 bits par itération
+                for (; i < limit2; i += 2) {
+                    // ------------ mot i ------------
+                    {
+                        uint64_t u  = row_u[i];
+                        uint64_t c  = row[i];
+                        uint64_t d  = row_d[i];
+
+                        uint64_t uL = (i > 0) ? row_u[i-1] : 0ULL;
+                        uint64_t uR = row_u[i+1];
+
+                        uint64_t cL = (i > 0) ? row[i-1] : 0ULL;
+                        uint64_t cR = row[i+1];
+
+                        uint64_t dL = (i > 0) ? row_d[i-1] : 0ULL;
+                        uint64_t dR = row_d[i+1];
+
+                        uint64_t u_e = (u >> 1) | (uR << 63);
+                        uint64_t u_w = (u << 1) | (uL >> 63);
+                        uint64_t c_e = (c >> 1) | (cR << 63);
+                        uint64_t c_w = (c << 1) | (cL >> 63);
+                        uint64_t d_e = (d >> 1) | (dR << 63);
+                        uint64_t d_w = (d << 1) | (dL >> 63);
+
+                        uint64_t out0 = combine_neighbors_8(
+                            u_w, u,   u_e,
+                            c_w,      c_e,
+                            d_w, d,   d_e,
+                            c
+                        );
+
+                        if (i == words_per_row - 1)
+                            out0 &= last_mask;
+
+                        dst[i] = out0;
+                    }
+
+                    // ------------ mot i+1 ------------
+                    {
+                        int j = i + 1;
+                        uint64_t u  = row_u[j];
+                        uint64_t c  = row[j];
+                        uint64_t d  = row_d[j];
+
+                        uint64_t uL = row_u[j-1];
+                        uint64_t uR = (j + 1 < words_per_row) ? row_u[j+1] : 0ULL;
+
+                        uint64_t cL = row[j-1];
+                        uint64_t cR = (j + 1 < words_per_row) ? row[j+1] : 0ULL;
+
+                        uint64_t dL = row_d[j-1];
+                        uint64_t dR = (j + 1 < words_per_row) ? row_d[j+1] : 0ULL;
+
+                        uint64_t u_e = (u >> 1) | (uR << 63);
+                        uint64_t u_w = (u << 1) | (uL >> 63);
+                        uint64_t c_e = (c >> 1) | (cR << 63);
+                        uint64_t c_w = (c << 1) | (cL >> 63);
+                        uint64_t d_e = (d >> 1) | (dR << 63);
+                        uint64_t d_w = (d << 1) | (dL >> 63);
+
+                        uint64_t out1 = combine_neighbors_8(
+                            u_w, u,   u_e,
+                            c_w,      c_e,
+                            d_w, d,   d_e,
+                            c
+                        );
+
+                        if (j == words_per_row - 1)
+                            out1 &= last_mask;
+
+                        dst[j] = out1;
+                    }
+                }
+
+                // Reste éventuel (si words_per_row est impair)
+                for (; i < words_per_row; ++i) {
                     uint64_t u  = row_u[i];
                     uint64_t c  = row[i];
                     uint64_t d  = row_d[i];
 
                     uint64_t uL = (i > 0) ? row_u[i-1] : 0ULL;
                     uint64_t uR = (i + 1 < words_per_row) ? row_u[i+1] : 0ULL;
-                    uint64_t cL = (i > 0) ? row[i-1]     : 0ULL;
-                    uint64_t cR = (i + 1 < words_per_row) ? row[i+1]   : 0ULL;
-                    uint64_t dL = (i > 0) ? row_d[i-1]   : 0ULL;
+
+                    uint64_t cL = (i > 0) ? row[i-1] : 0ULL;
+                    uint64_t cR = (i + 1 < words_per_row) ? row[i+1] : 0ULL;
+
+                    uint64_t dL = (i > 0) ? row_d[i-1] : 0ULL;
                     uint64_t dR = (i + 1 < words_per_row) ? row_d[i+1] : 0ULL;
 
-                    // Shifts horizontaux avec propagation inter-mots
                     uint64_t u_e = (u >> 1) | (uR << 63);
                     uint64_t u_w = (u << 1) | (uL >> 63);
-
                     uint64_t c_e = (c >> 1) | (cR << 63);
                     uint64_t c_w = (c << 1) | (cL >> 63);
-
                     uint64_t d_e = (d >> 1) | (dR << 63);
                     uint64_t d_w = (d << 1) | (dL >> 63);
 
                     uint64_t out = combine_neighbors_8(
-                        u_w, u,   u_e,   // NW, N, NE
-                        c_w,        c_e, // W,     E
-                        d_w, d,   d_e,   // SW, S, SE
-                        c             // self
+                        u_w, u,   u_e,
+                        c_w,      c_e,
+                        d_w, d,   d_e,
+                        c
                     );
 
                     if (i == words_per_row - 1)
@@ -189,14 +275,12 @@ frame conway_BitParallel(frame start, int gens) {
                 }
             }
 
-            // Un seul thread fait le swap, puis barrière implicite
             #pragma omp single
             {
                 std::swap(cur, next);
             }
-            // barrière implicite ici avant gen+1
-        }
-    }
+        } // fin boucle gen
+    } // fin région parallel
 
     frame res;
     bitboard_to_pbm(cur, res, w, h, words_per_row);
