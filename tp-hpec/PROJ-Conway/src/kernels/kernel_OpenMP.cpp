@@ -17,9 +17,8 @@ frame conway_OpenMP(frame start, int gens) {
     // Cela évite de mettre des 'if (y==0)' partout.
     unsigned char* zero_row = new unsigned char[stride](); // () initialise à 0
 
-    #pragma omp parallel for
     for (int g = 0; g < gens; g++) {
-        
+        #pragma omp parallel for schedule(static)
         for (int y = 0; y < h; y++) {
             
             // GESTION VERTICALE "BORDS MORTS"
