@@ -1,5 +1,5 @@
 .PHONY: all clean
-objects = build/main.o build/kernels.o build/frame.o build/kernel_GPU.o
+objects = build/main.o build/kernels.o build/frame.o
 headers = src/frame/frame.hpp src/kernels/kernels.hpp
 kernels = src/kernels/kernels.cpp \
           src/kernels/kernel_Naive.cpp \
@@ -8,6 +8,8 @@ kernels = src/kernels/kernels.cpp \
           src/kernels/kernel_SIMD.cpp \
           src/kernels/kernel_Fast.cpp \
           src/kernels/kernel_Bit.cpp \
+
+cuda_objs = build/kernel_GPU.o
 
 
 # Compil CPU
@@ -18,8 +20,8 @@ cpuopts = -march=native -mtune=native
 CUDA_ARCH = -arch=sm_89
 NVCC_OPTS = -O3 $(CUDA_ARCH)
 
-glife : build $(objects)
-	g++ $(opts) -o glife $(objects) -lcudart -L/usr/local/cuda/lib64
+glife : build $(objects) $(cuda_objs)
+	g++ $(opts) -o glife $(objects) $(cuda_objs) -lcudart -L/usr/local/cuda/lib64
 
 build/main.o : src/main.cpp $(headers)
 	g++ $(opts) -c -o $@ src/main.cpp
@@ -35,8 +37,8 @@ build/kernels.o : $(kernels) $(headers)
 # ============
 
 # compile le kernel GPU en .o
-build/kernel_GPU.o : src/kernels/kernel_GPU.cu $(headers)
-	nvcc $(NVCC_OPTS) -c -o $@ src/kernels/kernel_GPU.cu
+build/kernel_GPU.o : src/kernels/kernel_GPU.cu
+	nvcc -O3 -arch=sm_89 -c -o $@ $<
 
 build :
 	mkdir build

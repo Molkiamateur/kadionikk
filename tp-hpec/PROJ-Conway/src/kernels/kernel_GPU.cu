@@ -1,129 +1,132 @@
-#include "kernels.hpp"
 #include <cuda_runtime.h>
-#include <cstdio>
+#include "kernels.hpp"
 
-// =====================================================
-// Additionneur bit-parallèle (8 cellules d'un coup)
-// =====================================================
-__device__ inline uint8_t combine_neighbors_8(
-    uint8_t n1, uint8_t n2, uint8_t n3,
-    uint8_t n4, uint8_t n5,
-    uint8_t n6, uint8_t n7, uint8_t n8,
-    uint8_t self
-) {
-    uint8_t s0 = 0, s1 = 0, s2 = 0;
-    uint8_t N[8] = {n1,n2,n3,n4,n5,n6,n7,n8};
+typedef unsigned char u8;
 
-    #pragma unroll
+// ============================================================
+//  Helper : accès sécurisé aux octets (1 byte = 8 pixels)
+// ============================================================
+__device__ __forceinline__
+u8 ld_global(const u8* in, int h, int bpr, int y, int x_byte)
+{
+    if (y < 0 || y >= h)          return 0;
+    if (x_byte < 0 || x_byte >= bpr) return 0;
+    return in[y * bpr + x_byte];
+}
+
+// ============================================================
+//  Réduction bit-parallèle des voisins (8 bits en parallèle)
+//  même logique que ton additionneur logique s0/s1/s2
+// ============================================================
+__device__ __forceinline__
+u8 bit_reduce(u8 nw, u8 n, u8 ne,
+              u8 w,         u8 e,
+              u8 sw, u8 s, u8 se,
+              u8 self)
+{
+    u8 s0 = 0, s1 = 0, s2 = 0;
+    u8 nn[8] = {nw, n, ne, w, e, sw, s, se};
+
+#pragma unroll
     for (int i = 0; i < 8; i++) {
-        uint8_t x  = N[i];
-        uint8_t c1 = s0 & x;
-        uint8_t c2 = s1 & c1;
-        s0 ^= x;
+        u8 v  = nn[i];
+        u8 c1 = s0 & v;
+        u8 c2 = s1 & c1;
+        s0 ^= v;
         s1 ^= c1;
         s2 |= c2;
     }
-    return (uint8_t)((s1 & (uint8_t)~s2) & (uint8_t)(s0 | self));
+
+    // Conway : (s1 & ~s2) & (s0 | self)
+    return (u8)((~s2 & s1) & (s0 | self));
 }
 
-// =====================================================
-// Safe load (0 si bord)
-// =====================================================
-__device__ inline uint8_t load_safe(
-    const unsigned char* row, int idx, int max
+// ============================================================
+//  Kernel CUDA global-memory bit-packé
+//  1 thread = 1 octet (8 cellules)
+// ============================================================
+__global__
+void conway_kernel_global(
+    const u8* __restrict__ in,
+    u8*       __restrict__ out,
+    int w,          // largeur en pixels
+    int h,          // hauteur en pixels
+    int bpr         // bytes per row = w/8
 ) {
-    if (!row) return 0;
-    if (idx < 0 || idx >= max) return 0;
-    return row[idx];
+    int gx = blockIdx.x * blockDim.x + threadIdx.x; // index d’octet
+    int gy = blockIdx.y * blockDim.y + threadIdx.y; // ligne
+
+    if (gx >= bpr || gy >= h) return;
+
+    // On charge les 3×3 octets autour de (gx,gy)
+    u8 uL = ld_global(in, h, bpr, gy-1, gx-1);
+    u8 uC = ld_global(in, h, bpr, gy-1, gx  );
+    u8 uR = ld_global(in, h, bpr, gy-1, gx+1);
+
+    u8 cL = ld_global(in, h, bpr, gy,   gx-1);
+    u8 cC = ld_global(in, h, bpr, gy,   gx  );
+    u8 cR = ld_global(in, h, bpr, gy,   gx+1);
+
+    u8 dL = ld_global(in, h, bpr, gy+1, gx-1);
+    u8 dC = ld_global(in, h, bpr, gy+1, gx  );
+    u8 dR = ld_global(in, h, bpr, gy+1, gx+1);
+
+    // Voisinage bit-parallèle (même convention que ton kernel BitParallel CPU)
+    u8 W  = (u8)((cC >> 1) | (cL << 7));
+    u8 E  = (u8)((cC << 1) | (cR >> 7));
+
+    u8 N  = uC;
+    u8 S  = dC;
+
+    u8 NW = (u8)((uC >> 1) | (uL << 7));
+    u8 NE = (u8)((uC << 1) | (uR >> 7));
+    u8 SW = (u8)((dC >> 1) | (dL << 7));
+    u8 SE = (u8)((dC << 1) | (dR >> 7));
+
+    u8 out_byte = bit_reduce(NW, N, NE, W, E, SW, S, SE, cC);
+
+    out[gy * bpr + gx] = out_byte;
 }
 
-// =====================================================
-// Kernel conforme au CPU BitParallel
-// =====================================================
-__global__ void conway_kernel_bitpacked(
-    const unsigned char* __restrict__ in,
-    unsigned char* __restrict__ out,
-    int w, int h, int bytes_per_row
-) {
-    int bx = blockIdx.x * blockDim.x + threadIdx.x;
-    int y  = blockIdx.y * blockDim.y + threadIdx.y;
-
-    if (bx >= bytes_per_row || y >= h) return;
-
-    const unsigned char* row_u = (y > 0)     ? in + (y - 1) * bytes_per_row : nullptr;
-    const unsigned char* row   =              in +  y      * bytes_per_row;
-    const unsigned char* row_d = (y + 1 < h) ? in + (y + 1) * bytes_per_row : nullptr;
-
-    uint8_t uL = load_safe(row_u, bx - 1, bytes_per_row);
-    uint8_t uC = load_safe(row_u, bx,     bytes_per_row);
-    uint8_t uR = load_safe(row_u, bx + 1, bytes_per_row);
-
-    uint8_t cL = load_safe(row,   bx - 1, bytes_per_row);
-    uint8_t cC = load_safe(row,   bx,     bytes_per_row);
-    uint8_t cR = load_safe(row,   bx + 1, bytes_per_row);
-
-    uint8_t dL = load_safe(row_d, bx - 1, bytes_per_row);
-    uint8_t dC = load_safe(row_d, bx,     bytes_per_row);
-    uint8_t dR = load_safe(row_d, bx + 1, bytes_per_row);
-
-    // EXACTEMENT comme ton CPU BitParallel
-    uint8_t W  = (uint8_t)((cC >> 1) | (cL << 7));
-    uint8_t E  = (uint8_t)((cC << 1) | (cR >> 7));
-
-    uint8_t N  = uC;
-    uint8_t S  = dC;
-
-    uint8_t NW = (uint8_t)((uC >> 1) | (uL << 7));
-    uint8_t NE = (uint8_t)((uC << 1) | (uR >> 7));
-    uint8_t SW = (uint8_t)((dC >> 1) | (dL << 7));
-    uint8_t SE = (uint8_t)((dC << 1) | (dR >> 7));
-
-    uint8_t next = combine_neighbors_8(
-        NW, N, NE,
-        W,     E,
-        SW, S, SE,
-        cC
-    );
-
-    out[y * bytes_per_row + bx] = next;
-}
-
-// =====================================================
-// API publique
-// =====================================================
-frame conway_GPU(frame start, int gens) {
-    int w = start.width();
-    int h = start.height();
-    int bytes_per_row = w / 8;
-    int size = bytes_per_row * h;
+// ============================================================
+//  API publique : conway_GPU
+// ============================================================
+frame conway_GPU(frame start, int gens)
+{
+    int w   = start.width();
+    int h   = start.height();
+    int bpr = w / 8;
+    int size = bpr * h;
 
     if (gens <= 0) return start;
 
-    unsigned char* host_data =
-        reinterpret_cast<unsigned char*>(start.data());
+    u8* host = reinterpret_cast<u8*>(start.data());
 
-    unsigned char *d_cur = nullptr, *d_next = nullptr;
-    cudaMalloc(&d_cur,  size);
-    cudaMalloc(&d_next, size);
+    // Allocation device
+    u8 *dA = nullptr, *dB = nullptr;
+    cudaMalloc(&dA, size);
+    cudaMalloc(&dB, size);
 
-    cudaMemcpy(d_cur, host_data, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(dA, host, size, cudaMemcpyHostToDevice);
 
+    // Config grille/bloc
     dim3 block(32, 8);
     dim3 grid(
-        (bytes_per_row + block.x - 1) / block.x,
-        (h            + block.y - 1) / block.y
+        (bpr + block.x - 1) / block.x,
+        (h   + block.y - 1) / block.y
     );
 
+    // Boucle sur les générations
     for (int i = 0; i < gens; i++) {
-        conway_kernel_bitpacked<<<grid, block>>>(d_cur, d_next, w, h, bytes_per_row);
+        conway_kernel_global<<<grid, block>>>(dA, dB, w, h, bpr);
         cudaDeviceSynchronize();
-        unsigned char* tmp = d_cur; d_cur = d_next; d_next = tmp;
+        u8* tmp = dA; dA = dB; dB = tmp;
     }
 
-    cudaMemcpy(host_data, d_cur, size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(host, dA, size, cudaMemcpyDeviceToHost);
 
-    cudaFree(d_cur);
-    cudaFree(d_next);
+    cudaFree(dA);
+    cudaFree(dB);
 
     return start;
 }

@@ -7,7 +7,7 @@ frame (*kernels[KN])(frame, int) = {
     conway_SIMD,
     conway_Fast,
     conway_BitParallel,
-    conway_GPU            // <<<<< NOUVEAU KERNEL
+    conway_GPU
 };
 
 const char *kernel_name[KN] = {
@@ -17,8 +17,9 @@ const char *kernel_name[KN] = {
     "SIMD",
     "Fast",
     "BitParallel",
-    "GPU"                 // <<<<< NOM DU KERNEL
+    "GPU"
 };
+
 
 #include "kernel_Naive.cpp"
 #include "kernel_Smart.cpp"
@@ -26,4 +27,4 @@ const char *kernel_name[KN] = {
 #include "kernel_SIMD.cpp"
 #include "kernel_Fast.cpp"
 #include "kernel_Bit.cpp"
-// PAS besoin d’inclure kernel_GPU.cu ici (nvcc s’en occupe)
+// kernel_GPU.cu est compilé à part par nvcc → pas besoin de l’inclure ici
