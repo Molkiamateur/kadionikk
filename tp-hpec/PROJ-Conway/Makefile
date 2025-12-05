@@ -7,6 +7,7 @@ kernels = src/kernels/kernels.cpp \
 		  src/kernels/kernel_OpenMP.cpp \
 		  src/kernels/kernel_SIMD.cpp \
 		  src/kernels/kernel_Fast.cpp \
+		  src/kernels/kernel_Bit.cpp \
 
 
 #the march and mtune options might not fully work

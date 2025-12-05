@@ -18,7 +18,7 @@ static inline void pbm_to_bitboard(
     height = start.height();
 
     const int bytes_per_row = width / 8;
-    words_per_row = (width + 63) >> 6; // division par 64
+    words_per_row = (width + 63) >> 6; // /64 arrondi haut
 
     board.assign((size_t)height * words_per_row, 0ULL);
 
@@ -31,15 +31,14 @@ static inline void pbm_to_bitboard(
         for (int b = 0; b < bytes_per_row; ++b) {
             unsigned char byte = row[b];
 
-            // PBM (P4) → bit7 = pixel le plus à gauche
+            // PBM P4 : bit7 = pixel le plus à gauche
             for (int k = 0; k < 8; ++k) {
                 if (byte & (1u << k)) {
-                    int x = b * 8 + (7 - k); // bit7 → x=0
+                    int x = b * 8 + (7 - k); // bit7 → x=0, bit0 → x=7
                     if (x >= width) continue;
 
                     int word = x >> 6;
                     int bit  = x & 63;
-
                     board[(size_t)y * words_per_row + word] |= (1ULL << bit);
                 }
             }
@@ -114,12 +113,11 @@ static inline uint64_t combine_neighbors_8(
 }
 
 // ======================================================================
-//  Noyau principal bit-parallèle
+//  Noyau principal bit-parallèle optimisé (OpenMP: 1 région pour toutes les gens)
 // ======================================================================
 
 frame conway_BitParallel(frame start, int gens) {
     if (gens <= 0) {
-        // Renvoi direct
         frame copy;
         copy.set_w_h(start.width(), start.height());
         std::memcpy(copy.data(), start.data(), start.width()*start.height()/8);
@@ -140,49 +138,64 @@ frame conway_BitParallel(frame start, int gens) {
         last_mask = (1ULL << (w & 63)) - 1ULL;
     }
 
-    for (int gen = 0; gen < gens; ++gen) {
+    // Une seule région parallèle pour toutes les générations
+    #pragma omp parallel
+    {
+        for (int gen = 0; gen < gens; ++gen) {
 
-        #pragma omp parallel for schedule(static)
-        for (int y = 0; y < h; ++y) {
-            const uint64_t* row_u = (y > 0)     ? &cur[(size_t)(y - 1) * words_per_row] : zero_row.data();
-            const uint64_t* row   =              &cur[(size_t) y      * words_per_row];
-            const uint64_t* row_d = (y + 1 < h) ? &cur[(size_t)(y + 1) * words_per_row] : zero_row.data();
+            #pragma omp for schedule(static)
+            for (int y = 0; y < h; ++y) {
+                const uint64_t* row_u = (y > 0)     ? &cur[(size_t)(y - 1) * words_per_row] : zero_row.data();
+                const uint64_t* row   =              &cur[(size_t) y      * words_per_row];
+                const uint64_t* row_d = (y + 1 < h) ? &cur[(size_t)(y + 1) * words_per_row] : zero_row.data();
 
-            uint64_t* dst = &next[(size_t) y * words_per_row];
+                uint64_t* dst = &next[(size_t) y * words_per_row];
 
-            for (int i = 0; i < words_per_row; ++i) {
+                // On traite chaque mot 64 bits de la ligne
+                for (int i = 0; i < words_per_row; ++i) {
 
-                // Self
-                uint64_t c  = row[i];
-                uint64_t u  = row_u[i];
-                uint64_t d  = row_d[i];
+                    uint64_t u  = row_u[i];
+                    uint64_t c  = row[i];
+                    uint64_t d  = row_d[i];
 
-                // Voisins Est/Ouest (shift + propagation inter-mots)
-                uint64_t u_e = (u >> 1) | ((i + 1 < words_per_row ? row_u[i+1] : 0ULL) << 63);
-                uint64_t u_w = (u << 1) | ((i > 0 ? row_u[i-1] : 0ULL) >> 63);
+                    uint64_t uL = (i > 0) ? row_u[i-1] : 0ULL;
+                    uint64_t uR = (i + 1 < words_per_row) ? row_u[i+1] : 0ULL;
+                    uint64_t cL = (i > 0) ? row[i-1]     : 0ULL;
+                    uint64_t cR = (i + 1 < words_per_row) ? row[i+1]   : 0ULL;
+                    uint64_t dL = (i > 0) ? row_d[i-1]   : 0ULL;
+                    uint64_t dR = (i + 1 < words_per_row) ? row_d[i+1] : 0ULL;
 
-                uint64_t c_e = (c >> 1) | ((i + 1 < words_per_row ? row[i+1] : 0ULL) << 63);
-                uint64_t c_w = (c << 1) | ((i > 0 ? row[i-1] : 0ULL) >> 63);
+                    // Shifts horizontaux avec propagation inter-mots
+                    uint64_t u_e = (u >> 1) | (uR << 63);
+                    uint64_t u_w = (u << 1) | (uL >> 63);
 
-                uint64_t d_e = (d >> 1) | ((i + 1 < words_per_row ? row_d[i+1] : 0ULL) << 63);
-                uint64_t d_w = (d << 1) | ((i > 0 ? row_d[i-1] : 0ULL) >> 63);
+                    uint64_t c_e = (c >> 1) | (cR << 63);
+                    uint64_t c_w = (c << 1) | (cL >> 63);
 
-                // Calcul
-                uint64_t out = combine_neighbors_8(
-                    u_w, u, u_e,
-                    c_w,     c_e,
-                    d_w, d, d_e,
-                    c
-                );
+                    uint64_t d_e = (d >> 1) | (dR << 63);
+                    uint64_t d_w = (d << 1) | (dL >> 63);
 
-                if (i == words_per_row - 1)
-                    out &= last_mask;
+                    uint64_t out = combine_neighbors_8(
+                        u_w, u,   u_e,   // NW, N, NE
+                        c_w,        c_e, // W,     E
+                        d_w, d,   d_e,   // SW, S, SE
+                        c             // self
+                    );
 
-                dst[i] = out;
+                    if (i == words_per_row - 1)
+                        out &= last_mask;
+
+                    dst[i] = out;
+                }
             }
-        }
 
-        std::swap(cur, next);
+            // Un seul thread fait le swap, puis barrière implicite
+            #pragma omp single
+            {
+                std::swap(cur, next);
+            }
+            // barrière implicite ici avant gen+1
+        }
     }
 
     frame res;
