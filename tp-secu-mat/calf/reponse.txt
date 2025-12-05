@@ -1,0 +1,18 @@
+1. Défine les 10 états du processeur :
+
+s0BOOT : initialisation
+s1IF0/s1IF1 : récupération d'instruction (Instruction Fetch)
+s2ID : décodage d'instruction (Instruction Decode)
+s3ALU/s3BRU/s3ADDR : exécution (ALU = unité arithmétique, BRU = unité branchement)
+s4MEM0/s4MEM1 : accès mémoire
+s5WB : écriture du résultat (Write Back)
+
+Pipeline 5-6 etages
+
+2. 24 ech-> 6*4
+
+3. cf doc/sys.png
+
+8. On a une diff de 7 cycles par erreur
+
+9. On ajoute un else pour avoir dans les 2 cas un branchement
