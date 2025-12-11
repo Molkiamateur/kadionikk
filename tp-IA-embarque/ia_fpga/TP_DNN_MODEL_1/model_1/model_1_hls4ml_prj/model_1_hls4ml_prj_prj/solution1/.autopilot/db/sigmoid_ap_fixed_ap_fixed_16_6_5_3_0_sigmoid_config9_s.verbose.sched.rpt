@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'sigmoid_ap_fixed_ap_fixed_16_6_5_3_0_sigmoid_config9_s'
+================================================================
+* Date:           Wed Nov 12 16:32:55 2025
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        model_1_hls4ml_prj_prj
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.247 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        1|        1| 5.000 ns | 5.000 ns |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.24>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%data_V_read_1 = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %data_V_read)" [firmware/nnet_utils/nnet_activation.h:140]   --->   Operation 3 'read' 'data_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp_1 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %data_V_read_1, i4 0)" [firmware/nnet_utils/nnet_activation.h:166]   --->   Operation 4 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%sext_ln166 = sext i8 %tmp_1 to i10" [firmware/nnet_utils/nnet_activation.h:166]   --->   Operation 5 'sext' 'sext_ln166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.99ns)   --->   "%xor_ln167 = xor i10 %sext_ln166, -512" [firmware/nnet_utils/nnet_activation.h:167]   --->   Operation 6 'xor' 'xor_ln167' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%zext_ln170 = zext i10 %xor_ln167 to i64" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 7 'zext' 'zext_ln170' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sigmoid_table1_addr = getelementptr [1024 x i10]* @sigmoid_table1, i64 0, i64 %zext_ln170" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 8 'getelementptr' 'sigmoid_table1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (3.25ns)   --->   "%p_Val2_s = load i10* %sigmoid_table1_addr, align 2" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 9 'load' 'p_Val2_s' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 1024> <ROM>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str11)" [firmware/nnet_utils/nnet_activation.h:155]   --->   Operation 10 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str9) nounwind" [firmware/nnet_utils/nnet_activation.h:156]   --->   Operation 11 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str11, i32 %tmp)" [firmware/nnet_utils/nnet_activation.h:157]   --->   Operation 12 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/2] (3.25ns)   --->   "%p_Val2_s = load i10* %sigmoid_table1_addr, align 2" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 13 'load' 'p_Val2_s' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 1024> <ROM>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln703 = zext i10 %p_Val2_s to i16" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 14 'zext' 'zext_ln703' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i16P(i16* %res_V, i16 %zext_ln703)" [firmware/nnet_utils/nnet_activation.h:170]   --->   Operation 15 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_activation.h:172]   --->   Operation 16 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 4.25ns
+The critical path consists of the following:
+	wire read on port 'data_V_read' (firmware/nnet_utils/nnet_activation.h:140) [5]  (0 ns)
+	'xor' operation ('xor_ln167', firmware/nnet_utils/nnet_activation.h:167) [11]  (0.99 ns)
+	'getelementptr' operation ('sigmoid_table1_addr', firmware/nnet_utils/nnet_activation.h:170) [13]  (0 ns)
+	'load' operation ('__Val2__', firmware/nnet_utils/nnet_activation.h:170) on array 'sigmoid_table1' [14]  (3.26 ns)
+
+ <State 2>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('__Val2__', firmware/nnet_utils/nnet_activation.h:170) on array 'sigmoid_table1' [14]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

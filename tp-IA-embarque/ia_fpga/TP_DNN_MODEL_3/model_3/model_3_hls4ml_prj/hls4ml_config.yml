@@ -1,0 +1,65 @@
+Backend: Vivado
+Board: null
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    q_dense_1:
+      Precision:
+        bias: ap_fixed<16,3>
+        weight: ap_fixed<16,3>
+      ReuseFactor: 1
+      Trace: true
+    q_dense_1_input:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: true
+    q_dense_2:
+      Precision:
+        bias: ap_fixed<16,3>
+        weight: ap_fixed<16,3>
+      ReuseFactor: 1
+      Trace: true
+    q_dense_3:
+      Precision:
+        bias: ap_fixed<16,3>
+        weight: ap_fixed<16,3>
+      ReuseFactor: 1
+      Trace: true
+    q_dense_4:
+      Precision:
+        bias: ap_fixed<16,3>
+        weight: ap_fixed<16,3>
+      ReuseFactor: 1
+      Trace: true
+    q_relu_1:
+      Precision:
+        result: ap_ufixed<9,2>
+      ReuseFactor: 1
+      Trace: true
+    q_relu_2:
+      Precision:
+        result: ap_ufixed<9,2>
+      ReuseFactor: 1
+      Trace: true
+    q_relu_3:
+      Precision:
+        result: ap_ufixed<9,2>
+      ReuseFactor: 1
+      Trace: true
+    sigmoid:
+      Precision:
+        result: ap_fixed<9,3>
+      ReuseFactor: 1
+      Trace: true
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'model_3/model_3_hls4ml_prj/keras_model.h5'
+OutputDir: model_3/model_3_hls4ml_prj
+OutputPredictions: null
+ProjectName: myproject
+Stamp: 50a6335F
+XilinxPart: xc7a100tcsg324-1

@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.52551",
+   "Default View_TopLeft":"-394,4",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port BTNR -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
+preplace port BTNC -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace port BTNL -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 900 -defaultsOSRD
+preplace portBus LEDS -pg 1 -lvl 5 -x 1450 -y 590 -defaultsOSRD
+preplace inst model_nexys_pruned_5_0 -pg 1 -lvl 2 -x 500 -y 140 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -x 1330 -y 400 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 120 -y 890 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 3 -x 960 -y 820 -defaultsOSRD
+preplace inst master_IA_0 -pg 1 -lvl 3 -x 960 -y 560 -defaultsOSRD
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 3 1 N 860
+preplace netloc clk_wiz_clk_out_200 1 1 2 240 480 NJ
+preplace netloc clk_wiz_clk_out_400 1 1 3 230J 280 NJ 280 1140
+preplace netloc clk_wiz_clk_out_100 1 1 3 220 400 720 400 1190J
+preplace netloc clk_wiz_locked 1 1 2 NJ 860 N
+preplace netloc clk_1 1 0 1 NJ 900
+preplace netloc BTNR_1 1 0 3 20 800 NJ 800 750
+preplace netloc BTNL_1 1 0 4 NJ 520 NJ 520 770 420 1150J
+preplace netloc BTNC_1 1 0 4 NJ 490 NJ 490 780 410 1180J
+preplace netloc master_IA_0_LEDS 1 3 2 1150J 590 NJ
+preplace netloc model_nexys_pruned_5_0_ap_done 1 1 3 280 290 760 290 NJ
+preplace netloc model_nexys_pruned_5_0_ap_ready 1 1 3 290 300 730 310 NJ
+preplace netloc model_nexys_pruned_5_0_ap_idle 1 1 3 300 310 700 330 NJ
+preplace netloc model_nexys_pruned_5_0_layer13_out_0_V 1 2 2 710 700 1180J
+preplace netloc master_IA_0_i_valid 1 1 3 250 380 NJ 380 1160
+preplace netloc master_IA_0_ap_start 1 1 3 240 340 NJ 340 1170
+preplace netloc model_nexys_pruned_5_0_layer13_out_0_V_ap_vld 1 2 2 740 370 NJ
+preplace netloc master_IA_0_i_data 1 1 3 270 710 NJ 710 1190
+preplace netloc master_IA_0_rst_out 1 1 3 260 390 NJ 390 1140
+preplace netloc master_IA_0_state_machine_data 1 3 1 N 530
+levelinfo -pg 1 0 120 500 960 1330 1450
+pagesize -pg 1 -db -bbox -sgen -90 0 1570 980
+"
+}
+{
+   "da_board_cnt":"8",
+   "da_clkrst_cnt":"3"
+}

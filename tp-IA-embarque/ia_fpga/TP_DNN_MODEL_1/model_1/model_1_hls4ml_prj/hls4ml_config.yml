@@ -1,0 +1,31 @@
+Backend: Vivado
+Board: null
+ClockPeriod: 5
+HLSConfig:
+  LayerType:
+    Activation:
+      Precision: ap_fixed<16,8>
+      ReuseFactor: 100
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    Dense:
+      Precision:
+        bias: ap_fixed<8,2>
+        result: ap_fixed<8,2>
+        weight: ap_fixed<8,2>
+      ReuseFactor: 100
+    Input:
+      Precision:
+        result: ap_fixed<16,6>
+  Model:
+    Precision: ap_fixed<16,2>
+    ReuseFactor: 100
+    Strategy: resource
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'model_1/model_1_hls4ml_prj/keras_model.h5'
+OutputDir: model_1/model_1_hls4ml_prj
+OutputPredictions: null
+ProjectName: model_1_hls4ml_prj
+Stamp: 338496DC
+XilinxPart: xc7a100tcsg324-1
