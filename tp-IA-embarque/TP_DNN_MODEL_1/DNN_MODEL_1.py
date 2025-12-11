@@ -70,11 +70,13 @@ print("-------------KERAS Build Model----------------------")
 ########
 # A FAIRE : Modele du DNN
 ##############################
+
 keras_model = Sequential()
 # Couche d'entrée
-keras_model.add(Dense(16, input_dim=2, activation='relu'))
+keras_model.add(Dense(200, input_dim=2, activation='relu'))
 # Couche cachée
-keras_model.add(Dense(8, activation='relu'))
+keras_model.add(Dense(100, activation='relu'))
+keras_model.add(Dense(50, activation='relu'))
 # Couche de sortie
 keras_model.add(Dense(1, activation='sigmoid'))
 
@@ -96,7 +98,7 @@ X_train,X_test,Y_train,Y_test = train_test_split(inp,output,test_size=0.2, rando
 #  Apprentissage                            #
 #############################################
 #RECHERCHE D'UNE PRECISION DE 99%
-n_epoch = 50
+n_epoch = 150
 n_batch = 64
 adam = Adam(lr=0.00001)
 keras_model.compile(optimizer=adam, loss=['binary_crossentropy'], metrics=['accuracy'])
@@ -166,7 +168,7 @@ for layer in config['LayerName'].keys():
 hls_model = hls4ml.converters.convert_from_keras_model(keras_model,
                                                        hls_config=config,
                                                        output_dir='model_1/model_1_hls4ml_prj',
-                                                       part='ARTIX NEXYS A7') # COMPOSANTS
+                                                       part='xc7a100tcsg324-1') # COMPOSANTS
 hls4ml.utils.plot_model(hls_model, show_shapes=True, show_precision=True, to_file=None)
 hls4ml.model.profiling.numerical(model=keras_model, hls_model=hls_model, X=X_test[:1000])
 
@@ -187,19 +189,19 @@ config_cle = config['Model'].items()
 print(config_cle)
 # KERAS
 config['Model']['Precision'] = 'ap_fixed<16,2>'
-config['Model']['ReuseFactor'] = 100
+config['Model']['ReuseFactor'] = 100    # 100 operations pour 1 dsp
 config['Model']['Strategy'] = 'resource'
-config['LayerType']['Dense']['Precision']['weight'] = 'ap_fixed<16,2>'
-config['LayerType']['Dense']['Precision']['bias']   = 'ap_fixed<16,2>'
-config['LayerType']['Dense']['Precision']['result'] = 'ap_fixed<16,2>'
+config['LayerType']['Dense']['Precision']['weight'] = 'ap_fixed<8,2>'
+config['LayerType']['Dense']['Precision']['bias']   = 'ap_fixed<8,2>'
+config['LayerType']['Dense']['Precision']['result'] = 'ap_fixed<8,2>'
 config['LayerType']['Dense']['ReuseFactor'] = 100
-config['LayerType']['Activation']['ReuseFactor'] = 100
-config['LayerType']['Activation']['Precision'] = 'ap_fixed<16,2>'
+config['LayerType']['Activation']['ReuseFactor'] = 100   # 100 operation pour 1 dsp
+config['LayerType']['Activation']['Precision'] = 'ap_fixed<16,8>'
 
 hls_model = hls4ml.converters.convert_from_keras_model(keras_model,
                                                        hls_config=config,
                                                        output_dir='model_1/model_1_hls4ml_prj',
-                                                       part='ARTIX NEXYS A7', # COMPOSANT
+                                                       part='xc7a100tcsg324-1', # COMPOSANT
                                                        project_name='model_1_hls4ml_prj',
                                                        )
  

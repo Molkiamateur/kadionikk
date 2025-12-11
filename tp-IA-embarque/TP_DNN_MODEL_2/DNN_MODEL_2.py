@@ -73,27 +73,42 @@ print("-------------QKERAS Build Model----------------------")
 keras_model = Sequential()
 
 # Couche d'entrée
-keras_model.add(QDense(16, 
+keras_model.add(QDense(200, 
                        input_dim=2, 
-                       kernel_quantizer=quantized_bits(8,0,1),
-                       bias_quantizer=quantized_bits(8,0,1),
-                       activity_quantizer=quantized_relu(8,0),
-                       name="q_dense_1"))
-keras_model.add(QActivation(activation=quantized_relu(8,0), name="q_relu_1"))
+                       kernel_quantizer=quantized_bits(16,2,1),
+                       bias_quantizer=quantized_bits(16,2,1),
+                       kernel_initializer="lecun_uniform",
+                       name="q_dense_1",
+                       kernel_regularizer=l1(0.0001)))
+
+keras_model.add(QActivation(activation=quantized_relu(9,2), name="q_relu_1"))
 # Couche cachée
-keras_model.add(QDense(8, 
-                       kernel_quantizer=quantized_bits(8,0,1),
-                       bias_quantizer=quantized_bits(8,0,1),
-                       activity_quantizer=quantized_relu(8,0),
-                       name="q_dense_2"))
-keras_model.add(QActivation(activation=quantized_relu(8,0), name="q_relu_2"))
+keras_model.add(QDense(100, 
+                       kernel_quantizer=quantized_bits(16,2,1),
+                       bias_quantizer=quantized_bits(16,2,1),
+                       kernel_initializer="lecun_uniform",
+                       name="q_dense_2",
+                       kernel_regularizer=l1(0.0001)))
+
+keras_model.add(QActivation(activation=quantized_relu(9,2), name="q_relu_2"))
+
+keras_model.add(QDense(50, 
+                       kernel_quantizer=quantized_bits(16,2,1),
+                       bias_quantizer=quantized_bits(16,2,1),
+                       kernel_initializer="lecun_uniform",
+                       name="q_dense_3",
+                       kernel_regularizer=l1(0.0001)))
+
+keras_model.add(QActivation(activation=quantized_relu(9,2), name="q_relu_3"))
 # Couche de sortie
 keras_model.add(QDense(1, 
-                       kernel_quantizer=quantized_bits(8,0,1),
-                       bias_quantizer=quantized_bits(8,0,1),
-                       activity_quantizer=quantized_bits(8,0,1),
-                       name="q_dense_3"))
-keras_model.add(QActivation(activation=quantized_bits(8,0,1), name="q_sigmoid"))
+                       kernel_quantizer=quantized_bits(16,2,1),
+                       bias_quantizer=quantized_bits(16,2,1),
+                       kernel_initializer="lecun_uniform",
+                       name="q_dense_4",
+                       kernel_regularizer=l1(0.0001)))
+
+keras_model.add(QActivation(activation=quantized_bits(9,2,1), name="sigmoid"))
 
 
 print(' \
@@ -111,7 +126,7 @@ X_train,X_test,Y_train,Y_test = train_test_split(inp,output,test_size=0.2, rando
 #  Apprentissage                            #
 #############################################
 #RECHERCHE D'UNE PRECISION DE 99%
-n_epoch = 50
+n_epoch = 140
 n_batch = 64
 adam = Adam(lr=0.00001)
 keras_model.compile(optimizer=adam, loss=['binary_crossentropy'], metrics=['accuracy'])
@@ -165,6 +180,65 @@ print(' \
 # PRUNING MODEL                              # \
 ############################################## ')
    
+import tensorflow_model_optimization as tfmot
+from tensorflow.keras.optimizers import Adam
+import tensorflow as tf
+
+# Définition des paramètres de pruning
+pruning_params = {
+    "pruning_schedule": tfmot.sparsity.keras.ConstantSparsity(
+        target_sparsity=0.75,
+        begin_step=2000,
+        frequency=100
+    )
+}
+
+# Application du pruning
+model_for_pruning = tfmot.sparsity.keras.prune_low_magnitude(
+    keras_model,
+    **pruning_params
+)
+
+# Compilation
+adam = Adam(learning_rate=1e-5)
+model_for_pruning.compile(
+    optimizer=adam,
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
+print(model_for_pruning.summary())
+
+# Callbacks
+callbacks = all_callbacks(
+    stop_patience=1000,
+    lr_factor=0.5,
+    lr_epsilon=1e-6,
+    lr_cooldown=2,
+    lr_minimum=1e-7,
+    lr_patience=10,
+    outputDir='model_2_pruned'
+)
+callbacks.callbacks.append(
+    tf.keras.callbacks.TensorBoard(histogram_freq=1, profile_batch='500,520')
+)
+callbacks.callbacks.append(tfmot.sparsity.keras.UpdatePruningStep())
+callbacks.callbacks.append(
+    tfmot.sparsity.keras.PruningSummaries(log_dir='./logdir')
+)
+
+# Entraînement
+history = model_for_pruning.fit(
+    X_train, Y_train,
+    batch_size=n_batch,
+    epochs=n_epoch,
+    validation_split=0.1,
+    shuffle=True,
+    callbacks=callbacks.callbacks
+)
+
+
+"""
 from tensorflow_model_optimization.python.core.sparsity.keras import prune, pruning_callbacks, pruning_schedule
 from tensorflow_model_optimization.sparsity.keras import strip_pruning
 import tensorflow_model_optimization as tfmopt
@@ -175,13 +249,10 @@ import tensorflow as tf
 # A ECRIE variable model_for_pruning 
 ##############################################
 
-pruning_schedule = pruning_schedule.PolynomialDecay(initial_sparsity=0.36,
-                                                     final_sparsity=0.80,
-                                                     begin_step=0,
-                                                     end_step=np.ceil(len(X_train) / 1024).astype(np.int32) * 300)
+pruning_params = {"pruning_schedule" : pruning_schedule.ConstantSparsity(0.75, begin_step=2000, frequency=100)}
 
 model_for_pruning = prune.prune_low_magnitude(keras_model,
-                                              pruning_schedule=pruning_schedule)
+                                              pruning_params)
 
 adam = Adam(lr=0.00001)
 model_for_pruning.compile(optimizer=adam, 
@@ -192,20 +263,20 @@ print(model_for_pruning.summary())
 
 callbacks = all_callbacks(stop_patience = 1000,
                           lr_factor = 0.5,
-                       lr_epsilon = 0.000001,
+                          lr_epsilon = 0.000001,
                           lr_cooldown = 2,
                           lr_minimum = 0.0000001,
-                                    lr_patience = 10,
-                   outputDir = 'model_2_pruned')
+                          lr_patience = 10,
+                          outputDir = 'model_2_pruned')
 callbacks.callbacks.append(tf.keras.callbacks.TensorBoard(histogram_freq = 1,
                                                  profile_batch = '500,520'))
 callbacks.callbacks.append( pruning_callbacks.UpdatePruningStep())
 callbacks.callbacks.append( pruning_callbacks.PruningSummaries(log_dir='./logdir') )
 
-history = model_for_pruning.fit(X_train, Y_train, batch_size=1024,
-          epochs=300, validation_split=0.1, shuffle=True,
+history = model_for_pruning.fit(X_train, Y_train, batch_size=n_batch,
+          epochs=n_epoch, validation_split=0.1, shuffle=True,
           callbacks = callbacks.callbacks)
-
+"""
 ##################################################
 # Visualisation des performance after PRUNING    #
 ##################################################
@@ -249,7 +320,11 @@ print(' \
 #############################################\n \
     ')
 import hls4ml
-config = hls4ml.utils.config_from_keras_model(keras_model, granularity='model')
+from tensorflow_model_optimization.sparsity.keras import strip_pruning
+
+model_stripped = strip_pruning(model_for_pruning)
+
+config = hls4ml.utils.config_from_keras_model(model_stripped, granularity='model')
 config['Model']['Precision'] = 'ap_fixed<16,2>'
 config['Model']['ReuseFactor'] = 100
 config['Model']['Strategy'] = 'latency'
@@ -257,21 +332,21 @@ print("-----------------------------------")
 print("Configuration")
 plotting.print_dict(config)
 print("-----------------------------------")
-config = hls4ml.utils.config_from_keras_model(keras_model, granularity='name')
+config = hls4ml.utils.config_from_keras_model(model_stripped, granularity='name')
 plotting.print_dict(config)
 print("-----------------------------------")
 for layer in config['LayerName'].keys():
     config['LayerName'][layer]['Trace'] = True
-hls_model = hls4ml.converters.convert_from_keras_model(keras_model,
+hls_model = hls4ml.converters.convert_from_keras_model(model_stripped,
                                                        hls_config=config,
                                                        output_dir='model_2/model_2_hls4ml_prj',
-                                                       part='xc7z020clg400-1')
+                                                       part='xc7a100tcsg324-1')
 hls4ml.utils.plot_model(hls_model, show_shapes=True, show_precision=True, to_file=None)
-hls4ml.model.profiling.numerical(model=keras_model, hls_model=hls_model, X=X_test[:1000])
+hls4ml.model.profiling.numerical(model=model_stripped, hls_model=hls_model, X=X_test[:1000])
 
 hls_model.compile()
 hls4ml_pred, hls4ml_trace = hls_model.trace(X_test[:1000])
-keras_trace = hls4ml.model.profiling.get_ymodel_keras(keras_model, X_test[:1000])
+keras_trace = hls4ml.model.profiling.get_ymodel_keras(model_stripped, X_test[:1000])
 y_hls = hls_model.predict(X_test)
 
 print(' \
@@ -281,17 +356,17 @@ print(' \
     ')
 import hls4ml
 
-config = hls4ml.utils.config_from_keras_model(model_for_pruning, granularity='model')
+config = hls4ml.utils.config_from_keras_model(model_stripped, granularity='model')
 config_cle = config['Model'].items()
 print(config_cle)
 # KERAS
 config['Model']['ReuseFactor'] = 100
 config['Model']['Strategy'] = 'resource'
 
-hls_model = hls4ml.converters.convert_from_keras_model(model_for_pruning,
+hls_model = hls4ml.converters.convert_from_keras_model(model_stripped,
                                                        hls_config=config,
                                                        output_dir='model_2/model_2_hls4ml_prj',
-                                                       part='xc7z020clg400-1',
+                                                       part='xc7a100tcsg324-1',
                                                        project_name='model_2_hls4ml_prj',
                                                        )
  
