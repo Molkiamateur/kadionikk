@@ -1,0 +1,2 @@
+\cp tsttimer64 ../../ramdisk/root_fs/bin/
+\cp tsttimer64 /tftpboot

@@ -1,0 +1,2 @@
+\cp hello ../../ramdisk/root_fs/bin/
+\cp hello /tftpboot/

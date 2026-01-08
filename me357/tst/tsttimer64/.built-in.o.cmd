@@ -1,0 +1,1 @@
+cmd_/home/moez/ml507-ppc-linux/ramdisk/root_fs/transinv/built-in.o :=  rm -f /home/moez/ml507-ppc-linux/ramdisk/root_fs/transinv/built-in.o; GNUTARGET=elf32-powerpc ppc_4xx-ar rcs /home/moez/ml507-ppc-linux/ramdisk/root_fs/transinv/built-in.o

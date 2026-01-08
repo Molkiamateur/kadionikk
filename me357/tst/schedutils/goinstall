@@ -1,0 +1,3 @@
+\cp sched ../../ramdisk/root_fs/bin/
+\cp resched ../../ramdisk/root_fs/bin/
+\cp getsched ../../ramdisk/root_fs/bin/
