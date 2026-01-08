@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/se02/de10/standard_nios/software/miniprojet
+newSoftwareExampleWizardPage.sopcinfoFile=/home/se02/de10/standard_nios/nios2.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/se02/de10/standard_nios/software/miniprojet_bsp

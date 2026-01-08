@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <system.h>
+#include <unistd.h>
+#include <alt_types.h>
+#include <io.h>
+#include <string.h>
+
+#include "bsp.h"
+
+#define SEG7_SET(seg7_nbr, seg7_mask)	IOWR(SEG7_BASE, seg7_nbr, seg7_mask)
+#define SEG7_NUM    6
+
+static unsigned char szMap[] = {
+        63, 6, 91, 79, 102, 109, 125, 7, 127, 111, 119, 124, 57, 94, 121, 113};
+      // 0, 1,  2,  3,   4,   5,   6, 7,   8,   9,   a,   b,  c,  d,   e,   f
+
+
+void BSP_init(void){
+	int i;
+	for (i = 0;i< 10;i++){
+		BSP_clrLED(i);
+	}
+	SEG7_off();
+}
+
+void BSP_setLED(unsigned char lite){
+	int led_status;
+	led_status = IORD(LEDS_BASE,0);
+	led_status = led_status | 1 << lite;
+	IOWR(LEDS_BASE,0,led_status);
+}
+
+void BSP_clrLED(unsigned char lite){
+	int led_status;
+	led_status = IORD(LEDS_BASE,0);
+	led_status = led_status & ~(1 << lite);
+	IOWR(LEDS_BASE,0,led_status);
+}
+
+unsigned int BSP_readSW(){
+	return IORD(SWITCHS_BASE,0);
+}
+
+unsigned int BSP_readBP(unsigned char nbr){
+	int btn;
+	btn = (IORD(BP_BASE,0) >> nbr) & 1;
+	if(btn)
+		return ON;
+	else
+		return OFF;
+}
+
+void SEG7_on(void){
+	int seg_num;
+	for (seg_num=0;seg_num<SEG7_NUM;seg_num++){
+		SEG7_SET(seg_num,szMap[8]);
+	}
+}
+
+void SEG7_off(void){
+	int seg_num;
+	for (seg_num=0;seg_num<SEG7_NUM;seg_num++){
+		SEG7_SET(seg_num,0);
+	}
+}
+
+void SEG7_Decimal(unsigned int value){
+	char seg[10];
+	int seg_num;
+
+	sprintf(seg,"%d",value);
+	SEG7_off();
+
+	for (seg_num=0;seg_num<strlen(seg);seg_num++){
+		SEG7_SET(strlen(seg)-seg_num-1, szMap[seg[seg_num]-'0']);
+	}
+}

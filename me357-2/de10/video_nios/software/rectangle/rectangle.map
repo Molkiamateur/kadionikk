@@ -1,0 +1,1796 @@
+Archive member included to satisfy reference by file (symbol)
+
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+                              obj/default/hello_ucosii.o (__modsi3)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+                              obj/default/hello_ucosii.o (rand)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                              /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o) (_impure_ptr)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+                              /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o) (__muldi3)
+../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+                              ../rectangle_bsp//obj/HAL/src/crt0.o (alt_load)
+../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+                              ../rectangle_bsp//obj/HAL/src/crt0.o (alt_main)
+../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (alt_envsem)
+../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (alt_heapsem)
+../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o) (OSRunning)
+../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_core.o) (OSDebugInit)
+../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_core.o) (OS_FlagInit)
+../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_core.o) (OS_MemInit)
+../rectangle_bsp//libucosii_bsp.a(os_q.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_core.o) (OS_QInit)
+../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (OSSemCreate)
+../rectangle_bsp//libucosii_bsp.a(os_task.o)
+                              obj/default/hello_ucosii.o (OSTaskCreateExt)
+../rectangle_bsp//libucosii_bsp.a(os_time.o)
+                              obj/default/hello_ucosii.o (OSTimeDly)
+../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (alt_irq_init)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_init)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_ioctl)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o) (alt_alarm_start)
+../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (close)
+../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (alt_dev_list)
+../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (_do_ctors)
+../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (_do_dtors)
+../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_close.o) (alt_errno)
+../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_load.o) (alt_icache_flush_all)
+../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o) (alt_ic_isr_register)
+../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (alt_io_redirect)
+../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o) (alt_irq)
+../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_iic.o) (alt_irq_active)
+../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o) (open)
+../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_close.o) (alt_release_fd)
+../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o) (_alt_tick_rate)
+../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_core.o) (OSIntCtxSw)
+../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_task.o) (OSTaskStkInit)
+../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o) (alt_exception)
+../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_open.o) (alt_find_dev)
+../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_open.o) (alt_find_file)
+../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_open.o) (alt_get_fd)
+../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o) (alt_icache_flush)
+../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (atexit)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_main.o) (exit)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_close.o) (errno)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o) (memcmp)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                              ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o) (memcpy)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+                              ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o) (memset)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                              ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o) (strlen)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                              /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o) (__register_exitproc)
+/opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                              /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o) (__call_exitprocs)
+../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+                              /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o) (_exit)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000000000 0x0000000000000020
+sdram            0x0000000000000020 0x0000000003ffffe0
+onchip_sram      0x0000000008000000 0x0000000000040000
+VGA_Char_Buf_Subsystem_Onchip_SRAM 0x0000000009000000 0x0000000000002000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../rectangle_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/bsp.o
+LOAD obj/default/hello_ucosii.o
+LOAD obj/default/rom8x8.o
+LOAD obj/default/vgalib.o
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libstdc++.a
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a
+START GROUP
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a
+LOAD ../rectangle_bsp//libucosii_bsp.a
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libm.a
+END GROUP
+LOAD /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a
+                0x0000000000000000                __alt_mem_sdram = 0x0
+                0x0000000008000000                __alt_mem_onchip_sram = 0x8000000
+                0x0000000009000000                __alt_mem_VGA_Char_Buf_Subsystem_Onchip_SRAM = 0x9000000
+
+.entry          0x0000000000000000       0x20
+ *(.entry)
+ .entry         0x0000000000000000       0x20 ../rectangle_bsp//obj/HAL/src/crt0.o
+                0x0000000000000000                __reset
+
+.exceptions     0x0000000000000020      0x218
+                0x0000000000000020                PROVIDE (__ram_exceptions_start = ABSOLUTE (.))
+                0x0000000000000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+                0x0000000000000020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+                0x0000000000000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000000000020       0x54 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000000000074       0x10 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000000000084        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000000000088        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000000008c        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000000008c        0x8 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000000000094       0x14 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000000000a8       0x54 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000000000fc       0xc8 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+                0x00000000000000fc                alt_irq_handler
+ .exceptions    0x00000000000001c4       0x74 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000000001c4                alt_instruction_exception_entry
+                0x0000000000000238                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
+                0x0000000000000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
+
+.text           0x0000000000000238     0xb718
+                [!provide]                        PROVIDE (stext = ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000238       0x4c ../rectangle_bsp//obj/HAL/src/crt0.o
+                0x0000000000000238                _start
+ .text          0x0000000000000284      0x11c obj/default/bsp.o
+                0x0000000000000284                BSP_init
+                0x00000000000002a4                BSP_setLED
+                0x00000000000002cc                BSP_clrLED
+                0x00000000000002f4                BSP_readSW
+                0x0000000000000314                BSP_readBP
+                0x000000000000033c                SEG7_on
+                0x000000000000035c                SEG7_off
+                0x000000000000037c                SEG7_Decimal
+ .text          0x00000000000003a0      0x214 obj/default/hello_ucosii.o
+                0x00000000000003a0                min
+                0x00000000000003d4                task_rect
+                0x000000000000053c                main
+ .text          0x00000000000005b4        0x0 obj/default/rom8x8.o
+ .text          0x00000000000005b4      0x46c obj/default/vgalib.o
+                0x00000000000005b4                VgaInit
+                0x00000000000005e8                VgaClearScreen
+                0x000000000000068c                VgaSetCursor
+                0x000000000000070c                VgaWriteCharacter
+                0x0000000000000814                VgaWriteScreen
+                0x00000000000008a0                VgaPrintAt
+                0x00000000000008e8                VgaDrawBox
+ .text          0x0000000000000a20      0x1b4 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+                0x0000000000000a20                __divsi3
+                0x0000000000000aa0                __modsi3
+                0x0000000000000b14                __udivsi3
+                0x0000000000000b78                __umodsi3
+ .text          0x0000000000000bd4        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .text.srand    0x0000000000000bd4       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+                0x0000000000000bd4                srand
+ .text.rand     0x0000000000000be8       0x60 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+                0x0000000000000be8                rand
+ .text          0x0000000000000c48        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .text          0x0000000000000c48       0x60 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+                0x0000000000000c48                __muldi3
+ .text          0x0000000000000ca8       0xec ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+                0x0000000000000d10                alt_load
+ .text          0x0000000000000d94       0xc0 ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+                0x0000000000000d94                alt_main
+ .text          0x0000000000000e54      0x120 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+                0x0000000000000e54                __env_lock
+                0x0000000000000f14                __env_unlock
+ .text          0x0000000000000f74      0x1fc ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+                0x0000000000000f74                __malloc_lock
+                0x000000000000109c                __malloc_unlock
+ .text          0x0000000000001170     0x20c0 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                0x0000000000001170                OSEventNameGet
+                0x0000000000001290                OSEventNameSet
+                0x000000000000137c                OSEventPendMulti
+                0x00000000000019bc                OSInit
+                0x0000000000001a14                OSIntEnter
+                0x0000000000001a60                OSIntExit
+                0x0000000000001b54                OSSchedLock
+                0x0000000000001be4                OSSchedUnlock
+                0x0000000000001cc8                OSStart
+                0x0000000000001d30                OSStatInit
+                0x0000000000001de8                OSTimeTick
+                0x0000000000002010                OSVersion
+                0x0000000000002030                OS_Dummy
+                0x0000000000002050                OS_EventTaskRdy
+                0x00000000000021dc                OS_EventTaskWait
+                0x00000000000022e4                OS_EventTaskWaitMulti
+                0x000000000000242c                OS_EventTaskRemove
+                0x00000000000024dc                OS_EventTaskRemoveMulti
+                0x00000000000025d0                OS_EventWaitListInit
+                0x00000000000029e4                OS_MemClr
+                0x0000000000002a3c                OS_MemCopy
+                0x0000000000002aa8                OS_Sched
+                0x0000000000002be0                OS_StrLen
+                0x0000000000002c44                OS_TaskIdle
+                0x0000000000002ca4                OS_TaskStat
+                0x0000000000002e1c                OS_TaskStatStkChk
+                0x0000000000002ee0                OS_TCBInit
+ .text          0x0000000000003230      0x190 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+                0x0000000000003230                OSDebugInit
+ .text          0x00000000000033c0     0x1710 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+                0x00000000000033c0                OSFlagAccept
+                0x00000000000036cc                OSFlagCreate
+                0x00000000000037c8                OSFlagDel
+                0x0000000000003a0c                OSFlagNameGet
+                0x0000000000003b38                OSFlagNameSet
+                0x0000000000003c34                OSFlagPend
+                0x000000000000420c                OSFlagPendGetFlagsRdy
+                0x0000000000004270                OSFlagPost
+                0x0000000000004618                OSFlagQuery
+                0x000000000000482c                OS_FlagInit
+                0x0000000000004a2c                OS_FlagUnlink
+ .text          0x0000000000004ad0      0x708 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+                0x0000000000004ad0                OSMemCreate
+                0x0000000000004c98                OSMemGet
+                0x0000000000004d80                OSMemNameGet
+                0x0000000000004e70                OSMemNameSet
+                0x0000000000004f30                OSMemPut
+                0x0000000000005010                OSMemQuery
+                0x00000000000050fc                OS_MemInit
+ .text          0x00000000000051d8     0x1138 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+                0x00000000000051d8                OSQAccept
+                0x000000000000530c                OSQCreate
+                0x00000000000054b8                OSQDel
+                0x0000000000005730                OSQFlush
+                0x00000000000057ec                OSQPend
+                0x0000000000005a78                OSQPendAbort
+                0x0000000000005bdc                OSQPost
+                0x0000000000005d50                OSQPostFront
+                0x0000000000005ecc                OSQPostOpt
+                0x00000000000060e4                OSQQuery
+                0x0000000000006244                OS_QInit
+ .text          0x0000000000006310      0xa58 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+                0x0000000000006310                OSSemAccept
+                0x00000000000063c4                OSSemCreate
+                0x000000000000649c                OSSemDel
+                0x00000000000066d4                OSSemPend
+                0x00000000000068e0                OSSemPendAbort
+                0x0000000000006a44                OSSemPost
+                0x0000000000006b60                OSSemQuery
+                0x0000000000006c74                OSSemSet
+ .text          0x0000000000006d68     0x19d8 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+                0x0000000000006d68                OSTaskChangePrio
+                0x000000000000721c                OSTaskCreate
+                0x00000000000073c0                OSTaskCreateExt
+                0x000000000000759c                OSTaskDel
+                0x00000000000078dc                OSTaskDelReq
+                0x0000000000007a34                OSTaskNameGet
+                0x0000000000007bcc                OSTaskNameSet
+                0x0000000000007d2c                OSTaskResume
+                0x0000000000007f0c                OSTaskStkChk
+                0x00000000000080bc                OSTaskSuspend
+                0x00000000000082a4                OSTaskQuery
+                0x00000000000083cc                OSTaskRegGet
+                0x00000000000084dc                OSTaskRegGetID
+                0x000000000000858c                OSTaskRegSet
+                0x0000000000008694                OS_TaskReturn
+                0x00000000000086d0                OS_TaskStkClr
+ .text          0x0000000000008740      0x4e0 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+                0x0000000000008740                OSTimeDly
+                0x0000000000008858                OSTimeDlyHMSM
+                0x0000000000008980                OSTimeDlyResume
+                0x0000000000008b5c                OSTimeGet
+                0x0000000000008bbc                OSTimeSet
+ .text          0x0000000000008c20      0x5a0 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+                0x0000000000008c54                alt_irq_init
+                0x0000000000008c90                alt_sys_init
+ .text          0x00000000000091c0      0x164 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x00000000000091c0                altera_avalon_jtag_uart_read_fd
+                0x0000000000009220                altera_avalon_jtag_uart_write_fd
+                0x0000000000009280                altera_avalon_jtag_uart_close_fd
+                0x00000000000092d0                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x0000000000009324      0x570 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x0000000000009324                altera_avalon_jtag_uart_init
+                0x000000000000982c                altera_avalon_jtag_uart_close
+ .text          0x0000000000009894       0xf4 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x0000000000009894                altera_avalon_jtag_uart_ioctl
+ .text          0x0000000000009988      0x2c8 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0000000000009988                altera_avalon_jtag_uart_read
+ .text          0x0000000000009c50      0x2d0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000009c50                altera_avalon_jtag_uart_write
+ .text          0x0000000000009f20      0x100 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+                0x0000000000009f9c                alt_avalon_timer_sc_init
+ .text          0x000000000000a020      0x160 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+                0x000000000000a020                alt_alarm_start
+ .text          0x000000000000a180      0x10c ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+                0x000000000000a1bc                close
+ .text          0x000000000000a28c       0x4c ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000a28c                alt_dcache_flush_all
+ .text          0x000000000000a2d8       0x2c ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .text          0x000000000000a304       0xe4 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+                0x000000000000a340                alt_dev_llist_insert
+ .text          0x000000000000a3e8       0x64 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+                0x000000000000a3e8                _do_ctors
+ .text          0x000000000000a44c       0x64 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+                0x000000000000a44c                _do_dtors
+ .text          0x000000000000a4b0        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .text          0x000000000000a4b0       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+                0x000000000000a4b0                alt_icache_flush_all
+ .text          0x000000000000a4e4      0x1b0 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+                0x000000000000a4e4                alt_ic_isr_register
+                0x000000000000a534                alt_ic_irq_enable
+                0x000000000000a5bc                alt_ic_irq_disable
+                0x000000000000a648                alt_ic_irq_enabled
+ .text          0x000000000000a694       0xe8 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+                0x000000000000a694                alt_iic_isr_register
+ .text          0x000000000000a77c      0x12c ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+                0x000000000000a82c                alt_io_redirect
+ .text          0x000000000000a8a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .text          0x000000000000a8a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .text          0x000000000000a8a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .text          0x000000000000a8a8      0x248 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+                0x000000000000a99c                open
+ .text          0x000000000000aaf0       0x58 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+                0x000000000000aaf0                alt_release_fd
+ .text          0x000000000000ab48      0x1d0 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                0x000000000000ab48                alt_alarm_stop
+                0x000000000000abec                alt_tick
+ .text          0x000000000000ad18       0x24 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+                0x000000000000ad18                altera_nios2_gen2_irq_init
+ .text          0x000000000000ad3c       0xd0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+                0x000000000000ad3c                OSCtxSw
+                0x000000000000ad3c                OSIntCtxSw
+                0x000000000000adc8                OSStartHighRdy
+                0x000000000000ade8                OSStartTsk
+ .text          0x000000000000ae0c      0x29c ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+                0x000000000000ae0c                OSTaskStkInit
+                0x000000000000af58                OSTaskCreateHook
+                0x000000000000af7c                OSTaskDelHook
+                0x000000000000afa0                OSTaskSwHook
+                0x000000000000afc0                OSTaskStatHook
+                0x000000000000afe0                OSTimeTickHook
+                0x000000000000b000                OSInitHookBegin
+                0x000000000000b020                OSInitHookEnd
+                0x000000000000b040                OSTaskIdleHook
+                0x000000000000b060                OSTaskReturnHook
+                0x000000000000b084                OSTCBInitHook
+ .text          0x000000000000b0a8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .text          0x000000000000b0a8       0x90 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+                0x000000000000b0a8                alt_find_dev
+ .text          0x000000000000b138      0x108 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+                0x000000000000b138                alt_find_file
+ .text          0x000000000000b240       0xd8 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+                0x000000000000b240                alt_get_fd
+ .text          0x000000000000b318       0x90 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+                0x000000000000b318                alt_icache_flush
+ .text          0x000000000000b3a8       0x74 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000b3a8                alt_exception_cause_generated_bad_addr
+ .text          0x000000000000b41c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .text.atexit   0x000000000000b41c       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                0x000000000000b41c                atexit
+ .text          0x000000000000b430        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .text.exit     0x000000000000b430       0x34 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                0x000000000000b430                exit
+ .text          0x000000000000b464        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .text          0x000000000000b464        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x000000000000b464       0x78 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                0x000000000000b464                memcmp
+ .text          0x000000000000b4dc        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x000000000000b4dc      0x100 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                0x000000000000b4dc                memcpy
+ .text          0x000000000000b5dc        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .text.memset   0x000000000000b5dc       0xf4 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+                0x000000000000b5dc                memset
+ .text          0x000000000000b6d0        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .text.strlen   0x000000000000b6d0       0x98 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                0x000000000000b6d0                strlen
+ .text          0x000000000000b768        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x000000000000b768       0x90 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                0x000000000000b768                __register_exitproc
+ .text          0x000000000000b7f8        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x000000000000b7f8      0x120 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                0x000000000000b7f8                __call_exitprocs
+ .text          0x000000000000b918       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+                0x000000000000b918                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext = ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000000000000b950                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start = ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start = ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x000000000000b950                PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                0x000000000000b950                PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                0x000000000000b950                PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+ *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+                0x000000000000b950                PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+ *(.jcr)
+                0x000000000000b950                . = ALIGN (0x4)
+
+.rodata         0x000000000000b950      0x1cc
+                0x000000000000b950                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x000000000000b950                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000000000b950        0xf ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ *fill*         0x000000000000b95f        0x1 
+ .rodata        0x000000000000b960      0x122 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                0x000000000000b960                OSUnMapTbl
+ *fill*         0x000000000000ba82        0x2 
+ .rodata        0x000000000000ba84        0x2 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ *fill*         0x000000000000ba86        0x2 
+ .rodata        0x000000000000ba88        0x2 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ *fill*         0x000000000000ba8a        0x2 
+ .rodata        0x000000000000ba8c        0x2 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ *fill*         0x000000000000ba8e        0x2 
+ .rodata        0x000000000000ba90        0x2 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ *fill*         0x000000000000ba92        0x2 
+ .rodata        0x000000000000ba94        0x2 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ *fill*         0x000000000000ba96        0x2 
+ .rodata        0x000000000000ba98       0x75 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ *fill*         0x000000000000bb0d        0x3 
+ .rodata        0x000000000000bb10        0xa ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x000000000000bb1c                . = ALIGN (0x4)
+ *fill*         0x000000000000bb1a        0x2 
+                0x000000000000bb1c                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x000000000000b950                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+
+.rwdata         0x000000000000bb1c     0x27f0 load address 0x000000000000e30c
+                0x000000000000bb1c                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x000000000000bb1c                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000000bb1c        0x0 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000000bb1c       0x10 obj/default/bsp.o
+ .data          0x000000000000bb2c        0x0 obj/default/hello_ucosii.o
+ .data          0x000000000000bb2c     0x1000 obj/default/rom8x8.o
+                0x000000000000bb2c                rom8x8_bits
+ .data          0x000000000000cb2c        0x0 obj/default/vgalib.o
+ .data          0x000000000000cb2c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .data          0x000000000000cb2c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .data          0x000000000000cb2c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x000000000000cb2c      0x424 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .data          0x000000000000cf50        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .data          0x000000000000cf50        0x0 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .data          0x000000000000cf50     0x1168 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .data          0x000000000000e0b8        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000000000000e0b8      0x1a8 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                0x000000000000e0b8                alt_dev_null
+                0x000000000000e0e0                alt_fd_list
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .data          0x000000000000e260        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000000e260        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+                0x0000000000016260                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp = _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata._global_impure_ptr
+                0x000000000000e260        0x4 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000000e260                _global_impure_ptr
+ .sdata._impure_ptr
+                0x000000000000e264        0x4 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                0x000000000000e264                _impure_ptr
+ .sdata         0x000000000000e268        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .sdata         0x000000000000e26c        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .sdata         0x000000000000e270       0x76 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+                0x000000000000e270                OSDebugEn
+                0x000000000000e274                OSEndiannessTest
+                0x000000000000e278                OSEventEn
+                0x000000000000e27a                OSEventMax
+                0x000000000000e27c                OSEventNameEn
+                0x000000000000e27e                OSEventSize
+                0x000000000000e280                OSEventTblSize
+                0x000000000000e282                OSEventMultiEn
+                0x000000000000e284                OSFlagEn
+                0x000000000000e286                OSFlagGrpSize
+                0x000000000000e288                OSFlagNodeSize
+                0x000000000000e28a                OSFlagWidth
+                0x000000000000e28c                OSFlagMax
+                0x000000000000e28e                OSFlagNameEn
+                0x000000000000e290                OSLowestPrio
+                0x000000000000e292                OSMboxEn
+                0x000000000000e294                OSMemEn
+                0x000000000000e296                OSMemMax
+                0x000000000000e298                OSMemNameEn
+                0x000000000000e29a                OSMemSize
+                0x000000000000e29c                OSMemTblSize
+                0x000000000000e29e                OSMutexEn
+                0x000000000000e2a0                OSPtrSize
+                0x000000000000e2a2                OSQEn
+                0x000000000000e2a4                OSQMax
+                0x000000000000e2a6                OSQSize
+                0x000000000000e2a8                OSRdyTblSize
+                0x000000000000e2aa                OSSemEn
+                0x000000000000e2ac                OSStkWidth
+                0x000000000000e2ae                OSTaskCreateEn
+                0x000000000000e2b0                OSTaskCreateExtEn
+                0x000000000000e2b2                OSTaskDelEn
+                0x000000000000e2b4                OSTaskIdleStkSize
+                0x000000000000e2b6                OSTaskProfileEn
+                0x000000000000e2b8                OSTaskMax
+                0x000000000000e2ba                OSTaskNameEn
+                0x000000000000e2bc                OSTaskStatEn
+                0x000000000000e2be                OSTaskStatStkSize
+                0x000000000000e2c0                OSTaskStatStkChkEn
+                0x000000000000e2c2                OSTaskSwHookEn
+                0x000000000000e2c4                OSTaskRegTblSize
+                0x000000000000e2c6                OSTCBPrioTblMax
+                0x000000000000e2c8                OSTCBSize
+                0x000000000000e2ca                OSTicksPerSec
+                0x000000000000e2cc                OSTimeTickHookEn
+                0x000000000000e2ce                OSVersionNbr
+                0x000000000000e2d0                OS_TLS_TblSize
+                0x000000000000e2d2                OSTmrEn
+                0x000000000000e2d4                OSTmrCfgMax
+                0x000000000000e2d6                OSTmrCfgNameEn
+                0x000000000000e2d8                OSTmrCfgWheelSize
+                0x000000000000e2da                OSTmrCfgTicksPerSec
+                0x000000000000e2dc                OSTmrSize
+                0x000000000000e2de                OSTmrTblSize
+                0x000000000000e2e0                OSTmrWheelSize
+                0x000000000000e2e2                OSTmrWheelTblSize
+                0x000000000000e2e4                OSDataSize
+ *fill*         0x000000000000e2e6        0x2 
+ .sdata         0x000000000000e2e8       0x14 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                0x000000000000e2e8                alt_fs_list
+                0x000000000000e2f0                alt_dev_list
+                0x000000000000e2f8                alt_max_fd
+ .sdata         0x000000000000e2fc        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+                0x000000000000e2fc                alt_errno
+ .sdata         0x000000000000e300        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+                0x000000000000e300                alt_priority_mask
+ .sdata         0x000000000000e304        0x8 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                0x000000000000e304                alt_alarm_list
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000000000e30c                . = ALIGN (0x4)
+                0x000000000000e30c                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata = ABSOLUTE (.))
+                0x000000000000e30c                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x000000000000e30c                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+
+.bss            0x0000000000010afc     0x4974
+                0x0000000000010afc                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000000010afc        0xc obj/default/vgalib.o
+ .sbss          0x0000000000010b08        0xc ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+                0x0000000000010b08                alt_argc
+                0x0000000000010b0c                alt_argv
+                0x0000000000010b10                alt_envp
+ .sbss          0x0000000000010b14        0x8 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+                0x0000000000010b14                alt_envsem
+ .sbss          0x0000000000010b1c        0x8 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+                0x0000000000010b1c                alt_heapsem
+ .sbss          0x0000000000010b24       0x4c ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                0x0000000000010b24                OSCtxSwCtr
+                0x0000000000010b28                OSEventFreeList
+                0x0000000000010b2c                OSFlagFreeList
+                0x0000000000010b30                OSCPUUsage
+                0x0000000000010b34                OSIdleCtrMax
+                0x0000000000010b38                OSIdleCtrRun
+                0x0000000000010b3c                OSStatRdy
+                0x0000000000010b3d                OSIntNesting
+                0x0000000000010b3e                OSLockNesting
+                0x0000000000010b3f                OSPrioCur
+                0x0000000000010b40                OSPrioHighRdy
+                0x0000000000010b41                OSRdyGrp
+                0x0000000000010b42                OSRdyTbl
+                0x0000000000010b45                OSRunning
+                0x0000000000010b46                OSTaskCtr
+                0x0000000000010b48                OSIdleCtr
+                0x0000000000010b4c                OSTCBCur
+                0x0000000000010b50                OSTCBFreeList
+                0x0000000000010b54                OSTCBHighRdy
+                0x0000000000010b58                OSTCBList
+                0x0000000000010b5c                OSTickStepState
+                0x0000000000010b60                OSMemFreeList
+                0x0000000000010b64                OSQFreeList
+                0x0000000000010b68                OSTaskRegNextAvailID
+                0x0000000000010b6c                OSTime
+ .sbss          0x0000000000010b70        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                0x0000000000010b70                alt_fd_list_lock
+ .sbss          0x0000000000010b74        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+                0x0000000000010b74                alt_irq_active
+ .sbss          0x0000000000010b78        0xc ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                0x0000000000010b78                _alt_tick_rate
+                0x0000000000010b7c                _alt_nticks
+ .sbss          0x0000000000010b84        0x4 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000010b84                alt_instruction_exception_handler
+ .sbss.errno    0x0000000000010b88        0x4 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                0x0000000000010b88                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000010b8c        0x0 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000010b8c        0x0 obj/default/bsp.o
+ .bss           0x0000000000010b8c     0x2000 obj/default/hello_ucosii.o
+                0x0000000000010b8c                task1_stk
+ .bss           0x0000000000012b8c        0x0 obj/default/rom8x8.o
+ .bss           0x0000000000012b8c        0x0 obj/default/vgalib.o
+ .bss           0x0000000000012b8c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000012b8c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .bss           0x0000000000012b8c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .bss           0x0000000000012b8c        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .bss           0x0000000000012b8c        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .bss           0x0000000000012b8c        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .bss           0x0000000000012b8c        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .bss           0x0000000000012b8c        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .bss           0x0000000000012b8c     0x27e4 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                0x0000000000012b8c                OSEventTbl
+                0x000000000001303c                OSFlagTbl
+                0x000000000001317c                OSTaskStatStk
+                0x000000000001397c                OSTaskIdleStk
+                0x000000000001417c                OSTCBPrioTbl
+                0x00000000000141d0                OSTCBTbl
+                0x0000000000014bf0                OSMemTbl
+                0x0000000000015190                OSQTbl
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .bss           0x0000000000015370        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000015370      0x100 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+                0x0000000000015370                alt_irq
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000000015470        0x0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000015470        0x0 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+ *(COMMON)
+                0x0000000000015470                . = ALIGN (0x4)
+                0x0000000000015470                __bss_end = ABSOLUTE (.)
+
+.sdram          0x0000000000015470        0x0
+                [!provide]                        PROVIDE (_alt_partition_sdram_start = ABSOLUTE (.))
+ *(.sdram .sdram. sdram.*)
+                0x0000000000015470                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_sdram_end = ABSOLUTE (.))
+                0x0000000000015470                _end = ABSOLUTE (.)
+                0x0000000000015470                end = ABSOLUTE (.)
+                0x0000000000015470                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_sdram_load_addr = LOADADDR (.sdram))
+
+.onchip_sram    0x0000000008000000        0x0 load address 0x0000000000015470
+                [!provide]                        PROVIDE (_alt_partition_onchip_sram_start = ABSOLUTE (.))
+ *(.onchip_sram .onchip_sram. onchip_sram.*)
+                0x0000000008000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_onchip_sram_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_onchip_sram_load_addr = LOADADDR (.onchip_sram))
+
+.VGA_Char_Buf_Subsystem_Onchip_SRAM
+                0x0000000009000000        0x0 load address 0x0000000000015470
+                [!provide]                        PROVIDE (_alt_partition_VGA_Char_Buf_Subsystem_Onchip_SRAM_start = ABSOLUTE (.))
+ *(.VGA_Char_Buf_Subsystem_Onchip_SRAM .VGA_Char_Buf_Subsystem_Onchip_SRAM. VGA_Char_Buf_Subsystem_Onchip_SRAM.*)
+                0x0000000009000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_VGA_Char_Buf_Subsystem_Onchip_SRAM_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_VGA_Char_Buf_Subsystem_Onchip_SRAM_load_addr = LOADADDR (.VGA_Char_Buf_Subsystem_Onchip_SRAM))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2d
+ *(.comment)
+ .comment       0x0000000000000000       0x2d obj/default/bsp.o
+                                         0x2e (size before relaxing)
+ .comment       0x000000000000002d       0x2e obj/default/hello_ucosii.o
+ .comment       0x000000000000002d       0x2e obj/default/rom8x8.o
+ .comment       0x000000000000002d       0x2e obj/default/vgalib.o
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .comment       0x000000000000002d       0x2e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .comment       0x000000000000002d       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x830
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/bsp.o
+ .debug_aranges
+                0x0000000000000048       0x20 obj/default/hello_ucosii.o
+ .debug_aranges
+                0x0000000000000068       0x18 obj/default/rom8x8.o
+ .debug_aranges
+                0x0000000000000080       0x20 obj/default/vgalib.o
+ .debug_aranges
+                0x00000000000000a0       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x00000000000000c0       0x28 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_aranges
+                0x00000000000000e8       0x18 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000100       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_aranges
+                0x0000000000000120       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000140       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000160       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .debug_aranges
+                0x0000000000000180       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .debug_aranges
+                0x00000000000001e0       0x20 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .debug_aranges
+                0x0000000000000200       0x20 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .debug_aranges
+                0x0000000000000220       0x20 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .debug_aranges
+                0x0000000000000240       0x20 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .debug_aranges
+                0x0000000000000260       0x20 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .debug_aranges
+                0x0000000000000280       0x20 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .debug_aranges
+                0x00000000000002a0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000002c0       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x00000000000002e0       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_aranges
+                0x0000000000000300       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_aranges
+                0x0000000000000320       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x0000000000000340       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x0000000000000360       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x0000000000000380       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .debug_aranges
+                0x00000000000003a0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .debug_aranges
+                0x00000000000003c0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000000000003e0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x0000000000000400       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x0000000000000420       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x0000000000000440       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x0000000000000460       0x18 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x0000000000000478       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000498       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000000000004b8       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000000000004d8       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x00000000000004f8       0x30 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x0000000000000528       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000548       0x18 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000560       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .debug_aranges
+                0x0000000000000580       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x00000000000005a0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000000000005c0       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x00000000000005e0       0x20 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .debug_aranges
+                0x0000000000000600       0x20 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .debug_aranges
+                0x0000000000000620       0x30 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x0000000000000650       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x0000000000000670       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x0000000000000690       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x00000000000006b0       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_aranges
+                0x00000000000006d0       0x28 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x00000000000006f8       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x0000000000000718       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000738       0x18 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x0000000000000750       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000770       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000790       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_aranges
+                0x00000000000007b0       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x00000000000007d0       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x00000000000007f0       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000810       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x12e44
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x22 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000022      0x176 obj/default/bsp.o
+ .debug_info    0x0000000000000198      0x261 obj/default/hello_ucosii.o
+ .debug_info    0x00000000000003f9       0x4e obj/default/rom8x8.o
+ .debug_info    0x0000000000000447      0x286 obj/default/vgalib.o
+ .debug_info    0x00000000000006cd      0x347 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000a14      0x902 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_info    0x0000000000001316      0x8c0 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000001bd6      0x1ff /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_info    0x0000000000001dd5      0x144 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .debug_info    0x0000000000001f19      0x2cd ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .debug_info    0x00000000000021e6      0xd58 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .debug_info    0x0000000000002f3e      0xe89 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .debug_info    0x0000000000003dc7     0x1677 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .debug_info    0x000000000000543e      0x465 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .debug_info    0x00000000000058a3      0xf42 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .debug_info    0x00000000000067e5      0x5fd ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .debug_info    0x0000000000006de2      0xd98 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .debug_info    0x0000000000007b7a      0xa02 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .debug_info    0x000000000000857c     0x1329 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .debug_info    0x00000000000098a5      0x6c3 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .debug_info    0x0000000000009f68      0x8bd ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .debug_info    0x000000000000a825      0x6cb ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x000000000000aef0      0x745 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x000000000000b635      0x397 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x000000000000b9cc      0x5ee ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x000000000000bfba      0x5ec ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x000000000000c5a6      0x21d ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x000000000000c7c3      0x2b9 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .debug_info    0x000000000000ca7c      0x33d ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .debug_info    0x000000000000cdb9       0xa1 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000000000000ce5a      0x62f ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .debug_info    0x000000000000d489      0x1a8 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x000000000000d631       0x83 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .debug_info    0x000000000000d6b4       0x83 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .debug_info    0x000000000000d737       0xa8 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .debug_info    0x000000000000d7df       0xb2 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000000000000d891      0x339 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .debug_info    0x000000000000dbca      0x218 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x000000000000dde2      0x56f ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .debug_info    0x000000000000e351       0x22 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .debug_info    0x000000000000e373      0x18c ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_info    0x000000000000e4ff       0x88 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .debug_info    0x000000000000e587      0x423 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .debug_info    0x000000000000e9aa      0x2c8 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_info    0x000000000000ec72      0x2b5 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .debug_info    0x000000000000ef27       0x8d ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000efb4       0x26 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .debug_info    0x000000000000efda      0xdbc ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .debug_info    0x000000000000fd96       0x22 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .debug_info    0x000000000000fdb8      0x331 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .debug_info    0x00000000000100e9      0x332 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_info    0x000000000001041b      0x453 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .debug_info    0x000000000001086e       0xd8 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_info    0x0000000000010946      0x1e8 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000010b2e      0x118 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_info    0x0000000000010c46      0x90e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000011554       0x85 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_info    0x00000000000115d9      0x12b /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000011704      0x157 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_info    0x000000000001185b      0x135 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_info    0x0000000000011990       0xeb /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000011a7b      0x93f /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_info    0x00000000000123ba      0x981 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000012d3b      0x109 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x59dd
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012       0xde obj/default/bsp.o
+ .debug_abbrev  0x00000000000000f0      0x198 obj/default/hello_ucosii.o
+ .debug_abbrev  0x0000000000000288       0x41 obj/default/rom8x8.o
+ .debug_abbrev  0x00000000000002c9      0x116 obj/default/vgalib.o
+ .debug_abbrev  0x00000000000003df      0x10c /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00000000000004eb      0x246 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_abbrev  0x0000000000000731      0x1db /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x000000000000090c      0x103 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_abbrev  0x0000000000000a0f       0xc2 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000ad1      0x1ce ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000c9f      0x259 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .debug_abbrev  0x0000000000000ef8      0x2d1 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .debug_abbrev  0x00000000000011c9      0x3b6 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .debug_abbrev  0x000000000000157f       0x91 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .debug_abbrev  0x0000000000001610      0x2c1 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .debug_abbrev  0x00000000000018d1      0x27d ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .debug_abbrev  0x0000000000001b4e      0x2b6 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .debug_abbrev  0x0000000000001e04      0x2ce ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .debug_abbrev  0x00000000000020d2      0x2ae ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .debug_abbrev  0x0000000000002380      0x23a ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .debug_abbrev  0x00000000000025ba      0x224 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000027de      0x1a4 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x0000000000002982      0x2cc ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x0000000000002c4e      0x152 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x0000000000002da0      0x28c ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x000000000000302c      0x279 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x00000000000032a5      0x18f ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x0000000000003434      0x191 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x00000000000035c5      0x147 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .debug_abbrev  0x000000000000370c       0x5d ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000003769      0x15c ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .debug_abbrev  0x00000000000038c5      0x12b ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x00000000000039f0       0x83 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x0000000000003a73       0x83 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x0000000000003af6       0x70 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000003b66       0x75 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000003bdb      0x1a9 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000003d84      0x199 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000003f1d      0x157 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x0000000000004074       0x12 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000004086      0x144 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000000000041ca       0x46 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000004210      0x191 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .debug_abbrev  0x00000000000043a1       0xea ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x000000000000448b      0x192 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .debug_abbrev  0x000000000000461d       0x43 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000004660       0x14 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .debug_abbrev  0x0000000000004674      0x272 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .debug_abbrev  0x00000000000048e6       0x12 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x00000000000048f8      0x10c ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000004a04      0x11d ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000000000004b21      0x1dc ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x0000000000004cfd       0x97 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x0000000000004d94       0xed ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000004e81       0xc1 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000004f42      0x23e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000005180       0x39 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x00000000000051b9       0x90 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000005249       0xb9 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000005302       0xb7 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x00000000000053b9       0x90 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000005449      0x261 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x00000000000056aa      0x266 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000005910       0xcd ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x6260
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x72 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000072       0x7e obj/default/bsp.o
+ .debug_line    0x00000000000000f0      0x152 obj/default/hello_ucosii.o
+ .debug_line    0x0000000000000242       0x36 obj/default/rom8x8.o
+ .debug_line    0x0000000000000278      0x239 obj/default/vgalib.o
+ .debug_line    0x00000000000004b1      0x2da /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_line    0x000000000000078b       0xd2 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_line    0x000000000000085d       0x56 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+ .debug_line    0x00000000000008b3       0xc8 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_line    0x000000000000097b       0x8f ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .debug_line    0x0000000000000a0a       0xcb ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .debug_line    0x0000000000000ad5       0xe8 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .debug_line    0x0000000000000bbd      0x16c ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .debug_line    0x0000000000000d29      0xc32 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .debug_line    0x000000000000195b       0x8a ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .debug_line    0x00000000000019e5      0x8b9 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .debug_line    0x000000000000229e      0x343 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .debug_line    0x00000000000025e1      0x74a ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .debug_line    0x0000000000002d2b      0x4a8 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .debug_line    0x00000000000031d3      0xa43 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .debug_line    0x0000000000003c16      0x254 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .debug_line    0x0000000000003e6a      0x15a ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000003fc4       0xc0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x0000000000004084      0x26f ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x00000000000042f3       0xeb ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x00000000000043de      0x1a4 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x0000000000004582      0x1ae ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000004730       0xb1 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x00000000000047e1       0xed ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .debug_line    0x00000000000048ce      0x116 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .debug_line    0x00000000000049e4       0x69 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000004a4d       0xa7 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .debug_line    0x0000000000004af4       0xca ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000004bbe       0x69 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .debug_line    0x0000000000004c27       0x69 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .debug_line    0x0000000000004c90       0x4c ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000004cdc       0x63 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000004d3f       0xf4 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000004e33       0xbc ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000004eef       0xc9 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .debug_line    0x0000000000004fb8       0x6b ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000005023       0xbd ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000050e0       0x43 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000005123      0x156 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .debug_line    0x0000000000005279       0x77 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_line    0x00000000000052f0       0xf8 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .debug_line    0x00000000000053e8       0x51 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000005439       0x86 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+ .debug_line    0x00000000000054bf       0xfd ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .debug_line    0x00000000000055bc       0x9d ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000005659       0xa1 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .debug_line    0x00000000000056fa       0xd7 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_line    0x00000000000057d1       0xcf ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .debug_line    0x00000000000058a0       0x8f ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_line    0x000000000000592f       0xa0 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x00000000000059cf       0x65 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000005a34       0xa6 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_line    0x0000000000005ada       0x3a /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000005b14       0xe7 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000005bfb      0x139 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000005d34      0x15b /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_line    0x0000000000005e8f       0xc6 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000005f55      0x100 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000006055      0x17f /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x00000000000061d4       0x8c ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000     0x1f44
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x130 obj/default/bsp.o
+ .debug_frame   0x0000000000000130       0x78 obj/default/hello_ucosii.o
+ .debug_frame   0x00000000000001a8      0x114 obj/default/vgalib.o
+ .debug_frame   0x00000000000002bc       0x50 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000000000000030c       0x44 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_frame   0x0000000000000350       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_frame   0x0000000000000370       0x5c ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000003cc       0x2c ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000003f8       0x60 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+ .debug_frame   0x0000000000000458       0x64 ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+ .debug_frame   0x00000000000004bc      0x508 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+ .debug_frame   0x00000000000009c4       0x34 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+ .debug_frame   0x00000000000009f8      0x1fc ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+ .debug_frame   0x0000000000000bf4      0x114 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+ .debug_frame   0x0000000000000d08      0x1bc ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+ .debug_frame   0x0000000000000ec4      0x144 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+ .debug_frame   0x0000000000001008      0x274 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+ .debug_frame   0x000000000000127c       0xd8 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+ .debug_frame   0x0000000000001354       0x88 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000000000013dc       0xb0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x000000000000148c       0xac ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x0000000000001538       0x34 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x000000000000156c       0x38 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x00000000000015a4       0x38 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000000000015dc       0x60 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x000000000000163c       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x0000000000001670       0x60 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+ .debug_frame   0x00000000000016d0       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000001704       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+ .debug_frame   0x0000000000001738       0x60 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x0000000000001798       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x00000000000017d0       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x0000000000001808       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000001840       0xa4 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+ .debug_frame   0x00000000000018e4       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x000000000000191c       0x60 ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x000000000000197c       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000000000019b4       0x84 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+ .debug_frame   0x0000000000001a38       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000001a6c       0x64 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+ .debug_frame   0x0000000000001ad0       0x34 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000001b04      0x1a0 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+ .debug_frame   0x0000000000001ca4       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000001cdc       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000001d14       0x38 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000001d4c       0x34 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_frame   0x0000000000001d80       0x5c ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x0000000000001ddc       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000001dfc       0x28 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000001e24       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000001e44       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000001e64       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001e84       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000001ea4       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000001ec4       0x54 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000001f18       0x2c ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x2890
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0x50 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_str     0x0000000000000050      0x10a obj/default/bsp.o
+                                        0x149 (size before relaxing)
+ .debug_str     0x000000000000015a       0x85 obj/default/hello_ucosii.o
+                                        0x18a (size before relaxing)
+ .debug_str     0x00000000000001df        0xc obj/default/rom8x8.o
+                                         0x7c (size before relaxing)
+ .debug_str     0x00000000000001eb       0x7b obj/default/vgalib.o
+                                        0x13b (size before relaxing)
+ .debug_str     0x0000000000000266       0xcb /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+                                        0x116 (size before relaxing)
+ .debug_str     0x0000000000000331      0x3bf /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+                                        0x4dd (size before relaxing)
+ .debug_str     0x00000000000006f0       0x1f /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                                        0x4dd (size before relaxing)
+ .debug_str     0x000000000000070f       0x62 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+                                        0x17f (size before relaxing)
+ .debug_str     0x0000000000000771      0x108 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+                                        0x1ed (size before relaxing)
+ .debug_str     0x0000000000000879      0x10a ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+                                        0x22d (size before relaxing)
+ .debug_str     0x0000000000000983      0x26f ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+                                        0x7ab (size before relaxing)
+ .debug_str     0x0000000000000bf2       0x6e ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+                                        0x80a (size before relaxing)
+ .debug_str     0x0000000000000c60      0x604 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                                        0xa15 (size before relaxing)
+ .debug_str     0x0000000000001264      0x2db ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+                                        0x3ef (size before relaxing)
+ .debug_str     0x000000000000153f      0x115 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+                                        0x5ca (size before relaxing)
+ .debug_str     0x0000000000001654       0xb6 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+                                        0x2a2 (size before relaxing)
+ .debug_str     0x000000000000170a       0xa5 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+                                        0x58f (size before relaxing)
+ .debug_str     0x00000000000017af       0x38 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+                                        0x504 (size before relaxing)
+ .debug_str     0x00000000000017e7      0x122 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+                                        0x69e (size before relaxing)
+ .debug_str     0x0000000000001909       0x48 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+                                        0x465 (size before relaxing)
+ .debug_str     0x0000000000001951      0x42b ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+                                        0x679 (size before relaxing)
+ .debug_str     0x0000000000001d7c       0x7d ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x473 (size before relaxing)
+ .debug_str     0x0000000000001df9       0xd0 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+                                        0x437 (size before relaxing)
+ .debug_str     0x0000000000001ec9      0x2e1 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_str     0x0000000000001ec9       0x22 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x3a2 (size before relaxing)
+ .debug_str     0x0000000000001eeb      0x3a2 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x0000000000001eeb       0x36 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+                                        0x1d7 (size before relaxing)
+ .debug_str     0x0000000000001f21       0x3b ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+                                        0x220 (size before relaxing)
+ .debug_str     0x0000000000001f5c       0x3f ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+                                        0x1ca (size before relaxing)
+ .debug_str     0x0000000000001f9b       0xfa ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x0000000000001f9b      0x13e ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                                        0x39f (size before relaxing)
+ .debug_str     0x00000000000020d9      0x171 ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+ .debug_str     0x00000000000020d9       0x27 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+                                         0x86 (size before relaxing)
+ .debug_str     0x0000000000002100       0x2b ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+                                         0x85 (size before relaxing)
+ .debug_str     0x000000000000212b        0x8 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+                                         0xf7 (size before relaxing)
+ .debug_str     0x0000000000002133       0x11 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+                                        0x113 (size before relaxing)
+ .debug_str     0x0000000000002144       0x94 ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+                                        0x1f3 (size before relaxing)
+ .debug_str     0x00000000000021d8       0x18 ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+                                        0x1b2 (size before relaxing)
+ .debug_str     0x00000000000021f0       0x2c ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+                                        0x32e (size before relaxing)
+ .debug_str     0x000000000000221c       0x18 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+                                         0x59 (size before relaxing)
+ .debug_str     0x0000000000002234       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+                                        0x163 (size before relaxing)
+ .debug_str     0x0000000000002254       0x12 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+                                         0xf0 (size before relaxing)
+ .debug_str     0x0000000000002266       0x42 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+                                        0x23e (size before relaxing)
+ .debug_str     0x00000000000022a8      0x1a0 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+ .debug_str     0x00000000000022a8       0x2e ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                                        0x213 (size before relaxing)
+ .debug_str     0x00000000000022d6      0x100 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x00000000000022d6       0x13 ../rectangle_bsp//libucosii_bsp.a(os_cpu_a.o)
+                                         0x54 (size before relaxing)
+ .debug_str     0x00000000000022e9       0x43 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+                                        0x823 (size before relaxing)
+ .debug_str     0x000000000000232c       0x1e ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+                                         0x5f (size before relaxing)
+ .debug_str     0x000000000000234a        0xe ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+                                        0x1ae (size before relaxing)
+ .debug_str     0x0000000000002358      0x1bb ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+ .debug_str     0x0000000000002358       0x10 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+                                        0x26a (size before relaxing)
+ .debug_str     0x0000000000002368      0x104 ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+ .debug_str     0x0000000000002368      0x461 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                                        0x543 (size before relaxing)
+ .debug_str     0x00000000000027c9       0x44 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                                        0x13d (size before relaxing)
+ .debug_str     0x000000000000280d       0x11 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                                        0x4e6 (size before relaxing)
+ .debug_str     0x000000000000281e       0xf8 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+ .debug_str     0x000000000000281e      0x100 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_str     0x000000000000281e       0x27 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                                        0x127 (size before relaxing)
+ .debug_str     0x0000000000002845        0xd /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+                                        0x114 (size before relaxing)
+ .debug_str     0x0000000000002852      0x113 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000002852        0xd /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                                        0x513 (size before relaxing)
+ .debug_str     0x0000000000002852       0x27 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                                        0x507 (size before relaxing)
+ .debug_str     0x0000000000002879       0x17 ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+                                        0x121 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x30
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x30 ../rectangle_bsp//obj/HAL/src/crt0.o
+                0x0000000004000000                __alt_data_end = 0x4000000
+                0x0000000004000000                PROVIDE (__alt_stack_pointer = __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start = end)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x4000000)
+OUTPUT(rectangle.elf elf32-littlenios2)
+LOAD linker stubs
+
+.debug_ranges   0x0000000000000000       0x70
+ .debug_ranges  0x0000000000000000       0x20 ../rectangle_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x28 ../rectangle_bsp//libucosii_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000048       0x28 ../rectangle_bsp//libucosii_bsp.a(alt_exception_entry.o)
+
+.debug_line_str
+                0x0000000000000000     0x109c
+ .debug_line_str
+                0x0000000000000000       0x34 obj/default/bsp.o
+                                         0x6e (size before relaxing)
+ .debug_line_str
+                0x0000000000000034       0xbe obj/default/hello_ucosii.o
+                                        0x138 (size before relaxing)
+ .debug_line_str
+                0x00000000000000f2        0x9 obj/default/rom8x8.o
+                                         0x77 (size before relaxing)
+ .debug_line_str
+                0x00000000000000fb        0x9 obj/default/vgalib.o
+                                         0x80 (size before relaxing)
+ .debug_line_str
+                0x0000000000000104       0xea /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+                                        0x1a9 (size before relaxing)
+ .debug_line_str
+                0x00000000000001ee      0x24a /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+                                        0x323 (size before relaxing)
+ .debug_line_str
+                0x0000000000000438       0xf2 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-impure.o)
+                                        0x2b8 (size before relaxing)
+ .debug_line_str
+                0x000000000000052a       0x52 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+                                        0x173 (size before relaxing)
+ .debug_line_str
+                0x000000000000057c       0x88 ../rectangle_bsp//libucosii_bsp.a(alt_load.o)
+                                         0xd8 (size before relaxing)
+ .debug_line_str
+                0x0000000000000604       0xec ../rectangle_bsp//libucosii_bsp.a(alt_main.o)
+                                        0x1f7 (size before relaxing)
+ .debug_line_str
+                0x00000000000006f0       0x81 ../rectangle_bsp//libucosii_bsp.a(alt_env_lock.o)
+                                        0x1aa (size before relaxing)
+ .debug_line_str
+                0x0000000000000771       0x1d ../rectangle_bsp//libucosii_bsp.a(alt_malloc_lock.o)
+                                        0x1cb (size before relaxing)
+ .debug_line_str
+                0x000000000000078e       0x15 ../rectangle_bsp//libucosii_bsp.a(os_core.o)
+                                         0xe5 (size before relaxing)
+ .debug_line_str
+                0x00000000000007a3       0x16 ../rectangle_bsp//libucosii_bsp.a(os_dbg_r.o)
+                                         0xb9 (size before relaxing)
+ .debug_line_str
+                0x00000000000007b9       0x15 ../rectangle_bsp//libucosii_bsp.a(os_flag.o)
+                                         0xe5 (size before relaxing)
+ .debug_line_str
+                0x00000000000007ce       0x14 ../rectangle_bsp//libucosii_bsp.a(os_mem.o)
+                                         0xe2 (size before relaxing)
+ .debug_line_str
+                0x00000000000007e2       0x12 ../rectangle_bsp//libucosii_bsp.a(os_q.o)
+                                         0xdc (size before relaxing)
+ .debug_line_str
+                0x00000000000007f4       0x14 ../rectangle_bsp//libucosii_bsp.a(os_sem.o)
+                                         0xe2 (size before relaxing)
+ .debug_line_str
+                0x0000000000000808       0x15 ../rectangle_bsp//libucosii_bsp.a(os_task.o)
+                                         0xe5 (size before relaxing)
+ .debug_line_str
+                0x000000000000081d       0x15 ../rectangle_bsp//libucosii_bsp.a(os_time.o)
+                                         0xe5 (size before relaxing)
+ .debug_line_str
+                0x0000000000000832      0x103 ../rectangle_bsp//libucosii_bsp.a(alt_sys_init.o)
+                                        0x1ee (size before relaxing)
+ .debug_line_str
+                0x0000000000000935       0x35 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x1a5 (size before relaxing)
+ .debug_line_str
+                0x000000000000096a       0x3d ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+                                        0x1c3 (size before relaxing)
+ .debug_line_str
+                0x00000000000009a7       0x2c ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                                        0x187 (size before relaxing)
+ .debug_line_str
+                0x00000000000009d3       0x34 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x27e (size before relaxing)
+ .debug_line_str
+                0x0000000000000a07       0x2c ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x281 (size before relaxing)
+ .debug_line_str
+                0x0000000000000a33       0x25 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_timer_sc.o)
+                                        0x128 (size before relaxing)
+ .debug_line_str
+                0x0000000000000a58       0x1a ../rectangle_bsp//libucosii_bsp.a(alt_alarm_start.o)
+                                        0x113 (size before relaxing)
+ .debug_line_str
+                0x0000000000000a72       0x20 ../rectangle_bsp//libucosii_bsp.a(alt_close.o)
+                                        0x15a (size before relaxing)
+ .debug_line_str
+                0x0000000000000a92       0x1f ../rectangle_bsp//libucosii_bsp.a(alt_dcache_flush_all.o)
+                                         0xc1 (size before relaxing)
+ .debug_line_str
+                0x0000000000000ab1       0x96 ../rectangle_bsp//libucosii_bsp.a(alt_dev.o)
+                                        0x1f4 (size before relaxing)
+ .debug_line_str
+                0x0000000000000b47       0x1f ../rectangle_bsp//libucosii_bsp.a(alt_dev_llist_insert.o)
+                                        0x106 (size before relaxing)
+ .debug_line_str
+                0x0000000000000b66       0x17 ../rectangle_bsp//libucosii_bsp.a(alt_do_ctors.o)
+                                         0xa9 (size before relaxing)
+ .debug_line_str
+                0x0000000000000b7d       0x17 ../rectangle_bsp//libucosii_bsp.a(alt_do_dtors.o)
+                                         0xa9 (size before relaxing)
+ .debug_line_str
+                0x0000000000000b94       0x14 ../rectangle_bsp//libucosii_bsp.a(alt_errno.o)
+                                        0x113 (size before relaxing)
+ .debug_line_str
+                0x0000000000000ba8       0x1f ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush_all.o)
+                                         0xf1 (size before relaxing)
+ .debug_line_str
+                0x0000000000000bc7       0x3a ../rectangle_bsp//libucosii_bsp.a(alt_iic.o)
+                                         0xff (size before relaxing)
+ .debug_line_str
+                0x0000000000000c01       0x2f ../rectangle_bsp//libucosii_bsp.a(alt_iic_isr_register.o)
+                                        0x10e (size before relaxing)
+ .debug_line_str
+                0x0000000000000c30       0x2b ../rectangle_bsp//libucosii_bsp.a(alt_io_redirect.o)
+                                        0x1fd (size before relaxing)
+ .debug_line_str
+                0x0000000000000c5b       0x1a ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+                                         0xf7 (size before relaxing)
+ .debug_line_str
+                0x0000000000000c75       0x17 ../rectangle_bsp//libucosii_bsp.a(alt_irq_vars.o)
+                                         0xbf (size before relaxing)
+ .debug_line_str
+                0x0000000000000c8c       0x13 ../rectangle_bsp//libucosii_bsp.a(alt_open.o)
+                                         0xfd (size before relaxing)
+ .debug_line_str
+                0x0000000000000c9f       0x19 ../rectangle_bsp//libucosii_bsp.a(alt_release_fd.o)
+                                        0x103 (size before relaxing)
+ .debug_line_str
+                0x0000000000000cb8       0x13 ../rectangle_bsp//libucosii_bsp.a(alt_tick.o)
+                                        0x115 (size before relaxing)
+ .debug_line_str
+                0x0000000000000ccb       0x20 ../rectangle_bsp//libucosii_bsp.a(altera_nios2_gen2_irq.o)
+                                         0xc4 (size before relaxing)
+ .debug_line_str
+                0x0000000000000ceb       0x13 ../rectangle_bsp//libucosii_bsp.a(os_cpu_c.o)
+                                        0x1f7 (size before relaxing)
+ .debug_line_str
+                0x0000000000000cfe       0x17 ../rectangle_bsp//libucosii_bsp.a(alt_find_dev.o)
+                                        0x19e (size before relaxing)
+ .debug_line_str
+                0x0000000000000d15       0x18 ../rectangle_bsp//libucosii_bsp.a(alt_find_file.o)
+                                        0x1bb (size before relaxing)
+ .debug_line_str
+                0x0000000000000d2d       0x15 ../rectangle_bsp//libucosii_bsp.a(alt_get_fd.o)
+                                        0x13a (size before relaxing)
+ .debug_line_str
+                0x0000000000000d42       0x1b ../rectangle_bsp//libucosii_bsp.a(alt_icache_flush.o)
+                                         0xcb (size before relaxing)
+ .debug_line_str
+                0x0000000000000d5d       0x3b ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+                                        0x117 (size before relaxing)
+ .debug_line_str
+                0x0000000000000d98       0x45 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+                                        0x235 (size before relaxing)
+ .debug_line_str
+                0x0000000000000ddd       0x3a /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+                                        0x335 (size before relaxing)
+ .debug_line_str
+                0x0000000000000e17       0x3e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-int_errno.o)
+                                        0x1c4 (size before relaxing)
+ .debug_line_str
+                0x0000000000000e55       0xf5 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+                                        0x2aa (size before relaxing)
+ .debug_line_str
+                0x0000000000000f4a       0x3c /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+                                        0x2aa (size before relaxing)
+ .debug_line_str
+                0x0000000000000f86       0x3c /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+                                        0x2aa (size before relaxing)
+ .debug_line_str
+                0x0000000000000fc2       0x3c /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+                                        0x2aa (size before relaxing)
+ .debug_line_str
+                0x0000000000000ffe       0x3e /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+                                        0x2cc (size before relaxing)
+ .debug_line_str
+                0x000000000000103c       0x43 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+                                        0x2d2 (size before relaxing)
+ .debug_line_str
+                0x000000000000107f       0x1d ../rectangle_bsp//libucosii_bsp.a(alt_exit.o)
+                                         0xdf (size before relaxing)
+
+.debug_loclists
+                0x0000000000000000      0xb08
+ .debug_loclists
+                0x0000000000000000      0x364 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_loclists
+                0x0000000000000364       0x17 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_loclists
+                0x000000000000037b       0xdb /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_loclists
+                0x0000000000000456       0x2a /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_loclists
+                0x0000000000000480       0x20 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_loclists
+                0x00000000000004a0       0xd6 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_loclists
+                0x0000000000000576      0x23b /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_loclists
+                0x00000000000007b1      0x12d /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_loclists
+                0x00000000000008de       0x4d /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_loclists
+                0x000000000000092b       0xa8 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_loclists
+                0x00000000000009d3      0x135 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)
+
+.debug_rnglists
+                0x0000000000000000      0x1a8
+ .debug_rnglists
+                0x0000000000000000       0x3f /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(lib2-divmod.o)
+ .debug_rnglists
+                0x000000000000003f       0x19 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-rand.o)
+ .debug_rnglists
+                0x0000000000000058       0x16 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/libgcc.a(_muldi3.o)
+ .debug_rnglists
+                0x000000000000006e       0x22 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_rnglists
+                0x0000000000000090       0x21 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_rnglists
+                0x00000000000000b1       0x17 ../rectangle_bsp//libucosii_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_rnglists
+                0x00000000000000c8       0x14 ../rectangle_bsp//libucosii_bsp.a(alt_irq_handler.o)
+ .debug_rnglists
+                0x00000000000000dc       0x19 ../rectangle_bsp//libucosii_bsp.a(alt_instruction_exception_entry.o)
+ .debug_rnglists
+                0x00000000000000f5       0x13 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-atexit.o)
+ .debug_rnglists
+                0x0000000000000108       0x13 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-exit.o)
+ .debug_rnglists
+                0x000000000000011b       0x13 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcmp.o)
+ .debug_rnglists
+                0x000000000000012e       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memcpy.o)
+ .debug_rnglists
+                0x0000000000000142       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-memset.o)
+ .debug_rnglists
+                0x0000000000000156       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-strlen.o)
+ .debug_rnglists
+                0x000000000000016a       0x14 /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__atexit.o)
+ .debug_rnglists
+                0x000000000000017e       0x2a /opt/intelFPGA/21.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/11.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/libc.a(lib_a-__call_atexit.o)

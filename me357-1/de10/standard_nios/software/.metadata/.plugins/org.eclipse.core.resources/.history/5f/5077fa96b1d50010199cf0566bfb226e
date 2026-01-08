@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <system.h>
+#include <unistd.h>
+#include <alt_types.h>
+#include <io.h>
+
+#include "bsp.h"
+
+int main()
+{
+  int sw;
+  BSP_init();
+  
+  printf("Hello from Nios II!\n");
+  
+  SEG7_Decimal(254896);
+  sw = BSP_readSW();
+  printf(sw);
+
+  BSP_setLED(sw);
+  usleep(1000000);
+}

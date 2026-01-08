@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <system.h>
+#include <unistd.h>
+#include <alt_types.h>
+#include <io.h>
+
+#include "bsp.h"
+
+#define SEG7_SET(seg7_nbr, seg7_mask)	IOWR(SEG7_BASE, seg7_nbr, seg7_mask)
+#define SEG7_NUM    6
+
+static unsigned char szMap[] = {
+        63, 6, 91, 79, 102, 109, 125, 7, 127, 111, 119, 124, 57, 94, 121, 113};
+      // 0, 1,  2,  3,   4,   5,   6, 7,   8,   9,   a,   b,  c,  d,   e,   f
+
+
+void BSP_init(void){
+	for (i = 0;i< 10;i++){
+		BSP_clrLED(i);
+	}
+	SEG7_off();
+
+
+}
+
+void BSP_setLED(unsigned char lite){
+	led_status = IORD(LEDS_BASE,0);
+	led_status = led_status | 1 << lite;
+	IOWR(LEDS_BASE,0,led_status);
+}
+
+void BSP_clrLED(unsigned char lite){
+	led_status = IORD(LEDS_BASE,0);
+	led_status = led_status & ~(1 << lite);
+	IOWR(LEDS_BASE,0,led_status);
+}
+
+unsigned int BSP_readSW(){
+	return IORD(SWITCHS_BASE,0);
+}
+
+unsigned int BSP_readBP(unsigned char nbr){
+}
+
+void SEG7_on(void){
+}
+
+void SEG7_off(void){
+}
+
+void SEG7_Decimal(unsigned int value){
+}

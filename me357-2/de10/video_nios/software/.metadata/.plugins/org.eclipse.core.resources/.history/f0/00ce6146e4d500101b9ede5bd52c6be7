@@ -1,0 +1,292 @@
+/*************************************************************************
+* Copyright (c) 2004 Altera Corporation, San Jose, California, USA.      *
+* All rights reserved. All use of this software and documentation is     *
+* subject to the License Agreement located at the end of this file below.*
+**************************************************************************
+* Description:                                                           *
+* The following is a simple hello world program running MicroC/OS-II.The *
+* purpose of the design is to be a very simple application that just     *
+* demonstrates MicroC/OS-II running on NIOS II.The design doesn't account*
+* for issues such as checking system call return codes. etc.             *
+*                                                                        *
+* Requirements:                                                          *
+*   -Supported Example Hardware Platforms                                *
+*     Standard                                                           *
+*     Full Featured                                                      *
+*     Low Cost                                                           *
+*   -Supported Development Boards                                        *
+*     Nios II Development Board, Stratix II Edition                      *
+*     Nios Development Board, Stratix Professional Edition               *
+*     Nios Development Board, Stratix Edition                            *
+*     Nios Development Board, Cyclone Edition                            *
+*   -System Library Settings                                             *
+*     RTOS Type - MicroC/OS-II                                           *
+*     Periodic System Timer                                              *
+*   -Know Issues                                                         *
+*     If this design is run on the ISS, terminal output will take several*
+*     minutes per iteration.                                             *
+**************************************************************************/
+
+
+#include <stdio.h>
+#include "includes.h"
+
+/* Definition of Task Stacks */
+#define   STACKSIZE       2048
+OS_STK    task1_stk[STACKSIZE];
+OS_STK    task2_stk[STACKSIZE];
+OS_STK    task3_stk[STACKSIZE];
+OS_STK    task4_stk[STACKSIZE];
+
+
+
+/* Definition of Task Priorities */
+
+#define TASK1_PRIO 1
+#define TASK2_PRIO 3
+#define TASK3_PRIO 4
+#define TASK4_PRIO 2
+
+// Pour les boutons
+
+#define BUTTON 4
+#define THRES 3
+
+OS_EVENT *MsgQueueBoutons;
+void *MsgQueueBoutonsTbl[10];
+
+INT8U BtnCounters[BUTTON];
+INT8U BtnState[BUTTON];
+INT8U BtnIDs[BUTTON] = {1,2,3,4};
+
+char getconfig;
+int config;
+int ms;
+int s;
+int m;
+
+
+void *task_chrono() {
+  while(1) {
+    switch (config){
+    case 1: //s
+      ms += 10;
+      if(ms == 100){
+		ms = 0;
+		s++;
+      }
+      if(s == 60){
+		s = 0;
+		m++;
+      }
+      break;
+
+    case 2: //t
+      // ne fait rien, il attend
+      break;
+
+    case 3: //r
+      ms = 0;
+      s = 0;
+      m = 0;
+      break;
+
+    default:
+      // ne fait rien
+      break;
+    }
+    OSTimeDlyHMSM(0, 0, 0, 100);
+  }
+}
+
+
+void *task_affichage(){
+  while(1){
+	  SEG7_Decimal(m*10000 + s *100 + ms);
+	  OSTimeDlyHMSM(0, 0, 0, 100);
+  }
+}
+
+
+void *task_btn()
+{
+  INT8U i;
+  unsigned int raw_state;
+
+  for(i = 0; i< BUTTON; i++){
+	  BtnCounters[i] = 0;
+	  BtnState[i] = 0;
+  }
+
+  while (1)
+  {
+
+	for(i=0;i<BUTTON;i++){
+		raw_state = BSP_readBP(i);
+
+		if (raw_state ==1){
+
+			if (BtnCounters[i] < THRES){
+				BtnCounters[i]++;
+
+				if (BtnCounters[i]==THRES){
+					if (BtnState[i]==0){
+						BtnState[i]=1;
+						OSQPost(MsgQueueBoutons,(void*)&BtnIDs[i]);
+					}
+				}
+
+			}
+		}
+
+		else{
+			BtnCounters[i] = 0;
+			BtnState[i]=0;
+		}
+	}
+
+
+    OSTimeDlyHMSM(0, 0, 0, 20);
+  }
+}
+
+
+void *task_interface(){
+
+  INT8U err;
+  INT8U * btn_received;
+  while(1){
+
+
+	  btn_received = (INT8U*)OSQPend(MsgQueueBoutons,0,&err);
+	  printf("err %d \n", err);
+	  if (err == 0 && btn_received != (void *) 0){
+		  switch (*btn_received){
+		  case 1:
+			  if (config == 1){
+				  config = 2;
+				  printf("\n=============================\n");
+				  printf("Stop du chrono\n");
+				  printf("=============================\n");
+			  }
+			  else {
+				  config = 1;
+				  printf("\n=============================\n");
+				  printf("Demarrage du chrono\n");
+				  printf("=============================\n");
+			  }
+			  break;
+		  case 2:
+			  printf("btn 2 \n");
+			  break;
+		  case 3:
+			  config = 3;
+			  printf("\n=============================\n");
+			  printf("Remise a zero du chrono\n");
+			  printf("=============================\n");
+
+			  break;
+		  case 4:
+			  printf("btn 4 \n");
+			  break;
+		  }
+
+	  }
+	  OSTimeDlyHMSM(0, 0, 0, 20);
+  }
+}
+
+
+
+int main() {
+
+BSP_init();
+VgaClearScreen();
+VgaInit();
+
+MsgQueueBoutons = OSQCreate(&MsgQueueBoutonsTbl[0],10);
+config = 3;
+
+VgaDrawBox(0, 0, 319, 239, 63 << 11);
+VgaSetCursor(10,5);
+VgaWriteScreen("CHRONO DE MORT");
+
+OSTaskCreateExt(task_chrono,
+				NULL,
+				(void *)&task1_stk[STACKSIZE-1],
+				TASK1_PRIO,
+				TASK1_PRIO,
+				task1_stk,
+				STACKSIZE,
+				NULL,
+				0 );
+
+
+OSTaskCreateExt(task_affichage,
+				NULL,
+				(void *)&task2_stk[STACKSIZE-1],
+				TASK2_PRIO,
+				TASK2_PRIO,
+				task2_stk,
+				STACKSIZE,
+				NULL,
+				0 );
+
+
+OSTaskCreateExt(task_interface,
+				NULL,
+				(void *)&task3_stk[STACKSIZE-1],
+				TASK3_PRIO,
+				TASK3_PRIO,
+				task3_stk,
+				STACKSIZE,
+				NULL,
+				0 );
+
+
+OSTaskCreateExt(task_btn,
+				NULL,
+				(void *)&task4_stk[STACKSIZE-1],
+				TASK4_PRIO,
+				TASK4_PRIO,
+				task4_stk,
+				STACKSIZE,
+				NULL,
+				0 );
+
+
+OSStart();
+
+return(0);
+}
+
+/******************************************************************************
+*                                                                             *
+* License Agreement                                                           *
+*                                                                             *
+* Copyright (c) 2004 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved.                                                        *
+*                                                                             *
+* Permission is hereby granted, free of charge, to any person obtaining a     *
+* copy of this software and associated documentation files (the "Software"),  *
+* to deal in the Software without restriction, including without limitation   *
+* the rights to use, copy, modify, merge, publish, distribute, sublicense,    *
+* and/or sell copies of the Software, and to permit persons to whom the       *
+* Software is furnished to do so, subject to the following conditions:        *
+*                                                                             *
+* The above copyright notice and this permission notice shall be included in  *
+* all copies or substantial portions of the Software.                         *
+*                                                                             *
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  *
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,    *
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE *
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER      *
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING     *
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER         *
+* DEALINGS IN THE SOFTWARE.                                                   *
+*                                                                             *
+* This agreement shall be governed in all respects by the laws of the State   *
+* of California and by the laws of the United States of America.              *
+* Altera does not recommend, suggest or require that this reference design    *
+* file be used in conjunction or combination with any other product.          *
+******************************************************************************/

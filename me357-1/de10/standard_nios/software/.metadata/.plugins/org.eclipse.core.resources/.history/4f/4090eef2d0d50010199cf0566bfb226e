@@ -1,0 +1,244 @@
+/*************************************************************************
+* Copyright (c) 2004 Altera Corporation, San Jose, California, USA.      *
+* All rights reserved. All use of this software and documentation is     *
+* subject to the License Agreement located at the end of this file below.*
+**************************************************************************
+* Description:                                                           *
+* The following is a simple hello world program running MicroC/OS-II.The * 
+* purpose of the design is to be a very simple application that just     *
+* demonstrates MicroC/OS-II running on NIOS II.The design doesn't account*
+* for issues such as checking system call return codes. etc.             *
+*                                                                        *
+* Requirements:                                                          *
+*   -Supported Example Hardware Platforms                                *
+*     Standard                                                           *
+*     Full Featured                                                      *
+*     Low Cost                                                           *
+*   -Supported Development Boards                                        *
+*     Nios II Development Board, Stratix II Edition                      *
+*     Nios Development Board, Stratix Professional Edition               *
+*     Nios Development Board, Stratix Edition                            *
+*     Nios Development Board, Cyclone Edition                            *
+*   -System Library Settings                                             *
+*     RTOS Type - MicroC/OS-II                                           *
+*     Periodic System Timer                                              *
+*   -Know Issues                                                         *
+*     If this design is run on the ISS, terminal output will take several*
+*     minutes per iteration.                                             *
+**************************************************************************/
+
+
+#include <stdio.h>
+#include "includes.h"
+
+/* Definition of Task Stacks */
+#define   STACKSIZE       2048
+OS_STK    task1_stk[STACKSIZE];
+OS_STK    task2_stk[STACKSIZE];
+OS_STK    task3_stk[STACKSIZE];
+OS_STK    root_task[STACKSIZE];
+
+
+/* Definition of Task Priorities */
+
+#define TASK1_PRIO 10
+#define TASK2_PRIO 15
+#define TASK3_PRIO 19
+#define ROOT_PRIO  20
+
+
+char getconfig;
+int config;
+int ms;
+int s;
+int m;
+
+
+
+void *task_chrono() {
+  INT8U OS_result;
+  OS_result = 0;
+
+
+  while(1) {
+    switch (config){
+    case 1: //s
+      ms += 100;
+      if(ms == 1000){
+	ms = 0;
+	s++;
+      }
+      if(s == 60){
+	s = 0;
+	m++;
+      }
+      break;
+
+    case 2: //t
+      // ne fait rien, il attend
+      break;
+
+    case 3: //r
+      ms = 0;
+      s = 0;
+      m = 0;
+      break;
+
+    default:
+      // ne fait rien
+      break;
+    }
+	OSTimeDly(10);
+  }
+}
+
+void *task_affichage(){
+
+  INT8U OS_result;
+  OS_result = 0;
+  while(1){
+	  SEG7_Decimal(m*10000+ s *100+ms/10);
+	OSTimeDly(10);
+  }
+}
+
+void *task_interface() {
+  while(1) {
+    getconfig = getchar();
+    switch (getconfig){
+    case 115: //s
+      config = 1;
+      printf("\n=============================\n");
+      printf("Demarrage du chrono\n");
+      printf("=============================\n");
+      break;
+    case 116: //t
+      printf("\n=============================\n");
+      printf("Stop du chrono\n");
+      printf("chrono : %02d:%02d:%03d\n", m, s, ms);
+      printf("=============================\n");
+      config = 2;
+      break;
+    case 114: //r
+      printf("\n=============================\n");
+      printf("Remise a zero du chrono\n");
+      printf("chrono : %02d:%02d:%03d\n", m, s, ms);
+      printf("=============================\n");
+      config = 3;
+      break;
+    default:
+      //ne fait rien
+      break;
+    }
+	OSTimeDly(5);
+  }
+  pthread_exit(NULL);
+}
+
+
+/*
+ * Root Task: main task
+ */
+void rootTask(void *arg) {
+INT8U OS_result;
+
+OS_result = 0;
+
+if((OS_result = OSTaskCreateExt(task_chrono,
+				(void *)NULL,
+				&task1_stk[STACKSIZE-1],
+				TASK1_PRIO,
+				TASK1_PRIO,
+				&stack1[0],
+				STACKSIZE,
+				(void *)0,
+				0 )))
+		printf("OSTaskCreateExt task1 failed\n");
+
+if ((OS_result = OSTaskCreateExt(task_affichage,
+				(void *)NULL,
+				&task2_stk[STACKSIZE-1],
+				TASK2_PRIO,
+				TASK2_PRIO,
+				&stack2[0],
+				STACKSIZE,
+				(void *)0,
+				0 )))
+		printf("OSTaskCreateExt task2 failed\n");
+
+if ((OS_result = OSTaskCreateExt(task_interface,
+				(void *)NULL,
+				&task3_stk[STACKSIZE-1],
+				TASK3_PRIO,
+				TASK3_PRIO,
+				&stack3[0],
+				STACKSIZE,
+				(void *)0,
+				0 )))
+		printf("OSTaskCreateExt task3 failed\n");
+
+while(1) {
+	OSTimeDly(100);
+}
+}
+
+
+int main() {
+INT8U OS_result;
+
+BSP_initLED();
+
+OSInit();
+
+printf("uC/OS II for BF537\n");
+
+printf("=============================\n");
+printf("Bienvenue mon gars suuuuuurrr\n");
+printf("=============================\n");
+
+if ((OS_result = OSTaskCreateExt(rootTask,
+				(void *)NULL,
+				&stack[STACKSIZE-1],
+				ROOT_PRIO,
+				ROOT_PRIO,
+				&stack[0],
+				STACKSIZE,
+				(void *)0,
+				0 )))
+		printf("OSTaskCreateExt rootTask failed\n");
+
+OSStart();
+
+return(0);
+}
+
+/******************************************************************************
+*                                                                             *
+* License Agreement                                                           *
+*                                                                             *
+* Copyright (c) 2004 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved.                                                        *
+*                                                                             *
+* Permission is hereby granted, free of charge, to any person obtaining a     *
+* copy of this software and associated documentation files (the "Software"),  *
+* to deal in the Software without restriction, including without limitation   *
+* the rights to use, copy, modify, merge, publish, distribute, sublicense,    *
+* and/or sell copies of the Software, and to permit persons to whom the       *
+* Software is furnished to do so, subject to the following conditions:        *
+*                                                                             *
+* The above copyright notice and this permission notice shall be included in  *
+* all copies or substantial portions of the Software.                         *
+*                                                                             *
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  *
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,    *
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE *
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER      *
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING     *
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER         *
+* DEALINGS IN THE SOFTWARE.                                                   *
+*                                                                             *
+* This agreement shall be governed in all respects by the laws of the State   *
+* of California and by the laws of the United States of America.              *
+* Altera does not recommend, suggest or require that this reference design    *
+* file be used in conjunction or combination with any other product.          *
+******************************************************************************/

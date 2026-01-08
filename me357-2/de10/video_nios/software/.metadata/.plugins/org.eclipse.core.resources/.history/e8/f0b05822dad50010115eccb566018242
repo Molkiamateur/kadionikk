@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <system.h>
+#include <time.h>
+#include <unistd.h>
+#include <alt_types.h>
+#include <io.h>
+#include "includes.h"
+#include "altera_up_avalon_video_dma_controller.h"
+
+#include "bsp.h"
+#include "vgalib.h"
+
+/* Definition of Task Stacks */
+#define   TASK_STACKSIZE       2048
+OS_STK    task1_stk[TASK_STACKSIZE];
+
+/* Definition of Task Priorities */
+#define TASK1_PRIORITY      1
+
+void task_rect(void* pdata){
+	int x1,x2,y1,y2;
+	short pixel_color;
+	while (1){
+
+	VgaDrawBox(rand()%320)
+	OSTimeDly(1000);
+	}
+}
+
+int main(void){
+
+  BSP_init();
+
+  VgaClearScreen();
+  VgaInit();
+
+  OSTaskCreateExt(task1,
+                  NULL,
+                  (void *)&task1_stk[TASK_STACKSIZE-1],
+                  TASK1_PRIORITY,
+                  TASK1_PRIORITY,
+                  task1_stk,
+                  TASK_STACKSIZE,
+                  NULL,
+                  0);
+
+  OSStart();
+  return 0;
+}
