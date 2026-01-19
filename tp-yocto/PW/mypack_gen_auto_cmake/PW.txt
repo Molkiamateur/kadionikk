@@ -1,0 +1,33 @@
+Creating 'Hello World' recipes
+==============================
+
+The goal of the exercise is to create simple recipes (like "Hello World") using:
+
+- A standard Makefile
+- Autotools
+- CMake (source from a tar+gz archive then from a Git repository)
+
+Work to be done:
+
+1- Create the directories for the 4 recipes in meta-training/recipes-core
+
+2- Using the course support, finalize the provided .bb skeletons (replace the '???') then add them to the meta-training layer
+
+-> Calculate the MD5 checksum with the 'md5sum' command, then add the value to the recipe . The tar.gz archives are in qemuarm-build/downloads.
+
+No checksum is necessary for the Git based recipe !
+
+$ md5sum downloads/<archive>
+
+3- Build, install and test the packages (using OPKG)
+
+On the PC:
+
+$ bitbake <list-of-recipes>
+$ bitbake package-index
+
+On the board:
+
+# opkg update
+# opkg install <list-of-packages>
+

@@ -1,0 +1,56 @@
+First "Hello World" recipe (local sources)
+==========================================
+
+The goal of this first exercise is the following:
+
+- Set up the build environnement (with the create_terminals.sh script)
+- Add the test layer (meta-training) using the bitbake-layers command
+- Add an example of "Hello World" recipe to the layer
+
+First of all you can create the environment with the provided script:
+
+$ create_terminals.sh 
+
+1- Load the compilation environment and start QEMU *in the QEMU tab*
+
+$ runqemu nographic
+
+2- Create the meta-training layer
+
+$ bitbake-layers create-layer ../meta-training
+
+3- Add the layer to conf/bblayers.conf 
+
+$ bitbake-layers add-layer ../meta-training
+
+4- Add mypack-hello recipe to "meta-training/" from the PW directory (mypack_hello)
+
+$ cp -a recipes-core <poky-path>/meta-training
+
+5- Test the production of the recipe (i.e. build the package)
+
+$ bitbake mypack-hello
+
+6- Check the content with 'dpkg'
+
+$ dpkg -c tmp/deploy/ipk/armv7vet2hf-neon/mypack-hello_1.0-r0_armv7vet2hf-neon.ipk
+
+7- Install the package on the target using scp + opkg then run the program 
+
+- On the PC
+
+$ scp tmp/deploy/ipk/armv7vet2hf-neon/mypack-hello_1.0-r0_armv7vet2hf-neon.ipk root@192.168.7.2:/home/root
+
+- On the target
+
+root@qemuarm:~# opkg install mypack-hello_1.0-r0_armv7vet2hf-neon.ipk
+Installing mypack-hello (1.0) on root
+Configuring mypack-hello.
+
+root@qemuarm:~# helloworld
+Hello Yocto!
+
+8- Remove the package !!
+
+root@qemuarm:~# opkg remove mypack-hello
+Removing mypack-hello (1.0) from root ...

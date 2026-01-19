@@ -1,0 +1,19 @@
+Updating psplash logo
+=====================
+
+The goal of the lab is to replace the Yocto logo by the Smile one in the psplash recipe (using a .bbappend).
+
+1- Fix the provided psplash recipe skeleton then copy it to meta-training2/recipes-core
+
+2- Create the logo file + add it to the recipe
+
+$ make-image-header.sh logo-smile.png POKY
+$ cp logo-smile-img.h <path>/meta-training2/recipes-core/psplash/files/psplash-poky-img.h
+
+3- Build a new image with a new logo
+
+$ bitbake training-image
+
+4- Run the image in graphical mode and check the logo
+
+$ runqemu

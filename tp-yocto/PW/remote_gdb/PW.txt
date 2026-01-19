@@ -1,0 +1,97 @@
+Remote debugging
+================
+
+The goal of this exercise is to use the SDK produced by Yocto in order to create and debug a small program to run test on the board.
+
+The SDK is *already* installed in the VM !
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+main ()
+{
+	int i;
+
+	for (i = 0 ; i < 10 ; i++)
+		printf ("i = %d\n", i);
+}
+
+Work to be done:
+
+1- Build gdbserver (already done)
+
+$ bitbake gdb -> create the 'gdbserver' package (already done)
+
+2- Install gdbserver
+
+-> re-start the core-image-minimal image
+
+$ runqemu core-image-minimal nographic
+
+# opkg install gdbserver
+
+3- Compile the program
+
+$ . /opt/poky/3.1.18/environment-setup-armv7vet2hf-neon-poky-linux-gnueabi
+$ cd src/loop
+
+$ make
+
+4- Send the program 'loop' on the target
+
+$ scp loop root@192.168.7.2:/home/root
+
+5- Run the program using gdb/gdbserver
+
+Start the program via 'gdbserver' on the target using the TCP 9999 port :
+
+# gdbserver :9999 loop
+
+Use the cross debugger on the PC :
+
+$ arm-poky-linux-gnueabi-gdb loop
+...
+Reading symbols from loop...done.
+(gdb) l
+1	#include <stdio.h>
+2	#include <stdlib.h>
+3	
+4	main ()
+5	{
+6		int i;
+7	
+8		for (i = 0 ; i < 10 ; i++)
+9			printf ("i = %d\n", i);
+10	}
+
+* Add a breakpoint line 9 :
+
+(gdb) b 9
+Breakpoint 1 at 0x842c: file loop.c, line 9.
+
+* Connect to the remote target :
+
+(gdb) target remote 192.168.7.2:9999
+...
+
+* Continue the execution of the program (use 'continue' and NOT 'run') :
+
+(gdb) c
+Continuing.
+
+Breakpoint 1, main () at loop.c:9
+9			printf ("i = %d\n", i);
+(gdb) n
+8		for (i = 0 ; i < 10 ; i++)
+(gdb) 
+
+Breakpoint 1, main () at loop.c:9
+9			printf ("i = %d\n", i);
+(gdb) 
+8		for (i = 0 ; i < 10 ; i++)
+(gdb) 
+
+6- Exit from GDB (with the 'quit' command) and use the same procedure to trace the bug in 'll_equal'
+
+-> No breakpoint needed, use "info stack" or "backtrace"

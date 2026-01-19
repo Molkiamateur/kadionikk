@@ -1,0 +1,18 @@
+Shared library recipe (.so)
+===========================
+
+The goal of this lab is to create a recipe for a dynamic library.
+This library will be used in another recipe (next exercise) and provides the LibHelloWorld() function which simply displays a message.
+
+Work to be done:
+
+1- Add a correct 'bbexample-lib' directory for the recipe after completing the provided .bb file
+
+2- Test the recipe production
+
+-> display the content of the produced .ipk (including the -dev file) with 'dpkg -c'
+-> please note the name of the produced package (libbbexample*.ipk)
+
+PLEASE DO *NOT* INSTALL THE PACKAGE !
+
+We will test the installation on target in the next PW.

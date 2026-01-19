@@ -1,0 +1,13 @@
+Using a patch
+=============
+
+This exercise describes how to apply a patch to the mypack-auto recipe. The patch is available in the 'files' directory.
+
+1- Update the provided recipe (.bbappend) and copy it (+ 'files' dir) to meta-training2/recipes-core/mypack-auto
+
+2- Build the package and upgrade it on the target
+
+# opkg update
+# opkg upgrade
+
+3- Check the upgrade by testing the 'hello_auto' program

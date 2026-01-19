@@ -1,0 +1,42 @@
+Creating a special image
+========================
+
+The goal is to create a 'special' image recipe based on 'core-image-minimal' and including the following packages:
+
+- mypack-gen
+- mypack-auto
+- mypack-auto-lib
+- hello-mod
+
+Please comment the following line in conf/local.conf to be able to check the
+rootfs content:
+
+#INHERIT += "rm_work"
+
+
+1- Update the provided recipe and install it in meta-training/recipes-core/images
+
+2- Build the recipe for the new image
+
+$ bitbake training-image
+
+3- Check the content of the new image in tmp/work/qemuarm-poky-linux-gnueabi/training-image/1.0-r0/rootfs
+
+4- Test the image with NFS-Root and check the root-fs
+
+Stop the QEMU emulator with 'Ctrl-A X' then start the new image:
+
+$ runqemu-extract-sdk tmp/deploy/images/qemuarm/training-image-qemuarm.tar.bz2 ~/rootfs_yocto/
+$ runqemu ~/rootfs_yocto nographic
+...
+Poky (Yocto Project Reference Distro) 3.1.18 qemuarm /dev/ttyAMA0
+
+qemuarm login: root
+root@qemuarm:~# mount
+192.168.7.1:/home/stage/rootfs_yocto on / type nfs (rw,relatime,vers=3,rsize=4096,wsize=4096,namlen=255,hard,nolock,proto=udp,port=3049,timeo=11,retrans=3,sec=sys,mountaddr=192.168.7.1,mountvers=3,mountport=3048,mountproto=udp,local_lock=all,addr=192.168.7.1)
+...
+
+root@qemuarm:~# cat /proc/cmdline 
+root=/dev/nfs nfsroot=192.168.7.1:/home/stage/rootfs_yocto,nfsvers=3,port=3049,udp,mountport=3048 rw  console=ttyS0 mem=256M ip=192.168.7.2::192.168.7.1:255.255.255.0 console=ttyAMA0 
+
+

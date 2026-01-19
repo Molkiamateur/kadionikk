@@ -1,0 +1,62 @@
+Building a "Yocto IoT Device" (QEMU)
+====================================
+
+1- Add Mosquitto (MQTT)
+
+on the PC (already done on the VM) :
+
+$ sudo apt-get install mosquitto mosquitto-clients
+
+on the target :
+
+* add some meta-openembedded/* layers to conf/bblayers.conf:
+
+  <path>/poky/meta-openembedded/meta-oe \
+  <path>/poky/meta-openembedded/meta-python \
+  <path>/poky/meta-openembedded/meta-networking \
+
+* Build the Mosquitto packages
+
+$ bitbake mosquitto
+
+* Install Mosquitto clients on the target (core-image-minimal)
+
+# opkg install mosquitto-clients
+
+* Test mosquitto_sub / mosquitto_pub
+
+$ mosquitto_sub -h <server-IP> -t <topic>
+
+# mosquitto_pub -h <server-IP> -t <topic> -m "<message>"
+
+2- Create the "qemu-sensor" recipe (without the SysvInit service !)
+
+-> please read meta-training/recipes-core/mypack-cmake !
+
+* Create a "meta-iot" layer
+
+$ cd poky
+$ bitbake-layers create-layer meta-iot
+
+* Fix some ??? in the recipe file and build the package
+
+$ bitbake-layers add-layer ../meta-iot
+$ bitbake qemu-sensor
+
+3- Update the 'get_value.sh' script (based on a loop + sleep)
+
+-> The script reads and sends the value every 5s
+
+4- Update the recipe in order to use a SysvInit service (use the "update-rc.d" class)
+
+5- Build the final image 'iot-sensor-image'
+
+$ bitbake iot-sensor-image
+
+6- Test the image
+
+$ runqemu iot-sensor-image nographic
+
+The service should start automatically !
+
+

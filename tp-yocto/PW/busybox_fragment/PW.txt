@@ -1,0 +1,39 @@
+Using a configuration "fragment"
+================================
+
+The purpose of this exercise is to modify the BusyBox configuration by using a configuration fragment.
+
+Work to be done:
+
+1- Change the BusyBox configuration
+
+$ bitbake -c menuconfig busybox
+
+-> validate 'ar' in 'Archival utilities' menu
+
+2- Create the fragment in tmp/work and copy it to the recipe
+
+$ bitbake -c diffconfig busybox
+
+3- Replace the ??? in the .bbappend file provided with the exercise 
+
+4- Add the provided .bbappend to the meta-training2/recipes-core/busybox directory then build the new package
+
+$ bitbake busybox
+
+5- Update the busybox package on the target and observe the result
+
+# opkg update
+
+# opkg install bash <- *VERY* IMPORTANT as 'opkg upgrade' removes the 'sh' link !!
+# opkg install grep
+
+# opkg upgrade
+
+-> don't worry about the "busybox-syslog" download error !
+
+
+6- Test the 'ar' command
+
+# ar
+

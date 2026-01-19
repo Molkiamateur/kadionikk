@@ -1,0 +1,22 @@
+Using a library (dependencies)
+==============================
+
+The purpose of this exercise is to use the previously created library recipe.
+
+The source code of the example is close to that of the first 'Hello World' except that it refers 
+to the function provided by the 'libbbexample.so.1' library.
+
+main (int ac, char **av)
+{
+   ...
+
+   LibHelloWorld();
+}
+
+Work to be done:
+
+1- Add a correct 'mypack-auto-lib' directory for the recipe whose .bb file is provided
+
+2- Test the production of the package
+
+3- Install the new package on target -> test the installation dependency with the library

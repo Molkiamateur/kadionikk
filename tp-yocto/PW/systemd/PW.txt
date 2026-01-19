@@ -1,0 +1,25 @@
+Adding a systemd service
+========================
+
+The goal is to enable de systemd "distro feature" and add a simple service
+running a script at boot time.
+
+1- Add the following options to conf/local.conf
+
+DISTRO_FEATURES:append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+
+2- Finalize the provided example recipe (fix the ???)
+
+3- Update conf/local.conf to add the systemd service example
+
+4- Build the image
+
+5- Start the image and test the service
+
+$ runqemu training-image nographic
+...
+# journalctl -f
+

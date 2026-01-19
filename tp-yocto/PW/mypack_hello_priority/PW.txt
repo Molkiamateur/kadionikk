@@ -1,0 +1,45 @@
+Layers priority
+===============
+
+The goal is to highlight the priority of the layers (training / training2).
+
+Work to be done:
+
+1- Create the 'meta-training2' layer (priority = 5) then add it with 'bitbake-layers add-layer'
+
+$ cd poky
+$ source oe-init-build-env qemuarm-build
+$ bitbake-layers create-layer --priority 5 ../meta-training2
+$ bitbake-layers add-layer ../meta-training2
+
+2- Add the contents of the provided recipes-core directory to meta-training2.
+
+3- Build the 'mypack-hello' recipe, note the produced version (still 1.0 !) and explain the result.
+
+$ bitbake mypack-hello
+
+4- Update the meta-training2 priority (in conf/layer.conf) to 6, rebuild the package and explain the result -> version 1.1
+
+5- Update the package on the target with the following commands
+
+# opkg update
+# opkg upgrade
+
+6- Add the following line to conf/local.conf:
+
+PREFERRED_VERSION_mypack-hello = "1.0"
+
+Build the recipe again -> back to 1.0
+
+7- Install the package (downgrade)
+
+We must use a local .ipk -> OPKG issue ?!
+
+# opkg update
+# opkg install mypack-hello_1.0-r0_armv7vet2hf-neon.ipk --force-downgrade
+
+The best way is to remove/install the package:
+
+# opkg remove mypack-hello
+# opkg install mypack-hello
+

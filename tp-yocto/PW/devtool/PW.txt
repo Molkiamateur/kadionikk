@@ -1,0 +1,46 @@
+Using Devtool
+=============
+
+The goal of this exercise is to modify the "mypack-cmake" recipe with Devtool.
+
+1- Start modifying the recipe
+
+$ cd <path>/qemuarm-build
+$ devtool modify mypack-cmake
+
+2- Modify hello_cmake.c then commit with Git -> just add a simple string just like "+ devtool" !
+
+$ cd workspace/sources/mypack-cmake
+$ vi hello_cmake.c
+<-- modify the string
+$ git commit -a -m "devtool test"
+
+3- Create a .bbappend in meta-training2
+
+$ devtool finish mypack-cmake <path>/meta-training2
+
+** don't forget to remove the 'workspace' directory (and refererence in bblayers.conf) !
+
+You should get something like the following:
+
+$ tree ../meta-training2/recipes-core/mypack-cmake/
+├── mypack-cmake
+│   └── 0001-devtool-test.patch
+└── mypack-cmake_%.bbappend
+
+-> add the following to the .bbappend (for upgrade convenience)
+
+PR = "r1"
+
+4- Build the package
+
+$ bitbake mypack-cmake
+
+5- Upgrade the package in the 'core-image-minimal' image
+
+$ bitbake package-index
+
+$ runqemu core-image-minimal nographic
+...
+# opkg update
+# opkg upgrade

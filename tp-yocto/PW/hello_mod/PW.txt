@@ -1,0 +1,51 @@
+Recipe for a kernel module
+==========================
+
+The goal of this lab is to create a recipe for the integration of a 'Hello World' kernel module.
+This module displays the value of a parameter passed during the insertion (or 0 if no parameter).
+
+#include <linux/module.h>
+#include <linux/kernel.h>
+
+MODULE_LICENSE("GPL");
+
+static int param;
+
+module_param(param, int, 0644);
+
+static int __init hello_init(void)
+{
+  pr_info ("Hello World (param= %d)\n", param);
+  return 0;
+}
+
+static void __exit hello_exit(void)
+{
+  pr_info ("Goodbye, cruel world!\n");
+}
+
+module_init(hello_init);
+module_exit(hello_exit);
+
+Work to be done:
+
+1- Update the provided recipe (hello_mod.bb) by replacing the '???'. 
+Install this recipe file + the files/ directory (module sources) into a new 'meta-training/recipes-kernel/hello-mod' subdirectory.
+
+2- Build the package
+
+$ bitbake hello-mod
+$ bitbake package-index
+
+-> The procedure creates hello-mod*.ipk (empty) + kernel-module-hello*.ipk
+ 
+4- Test the installation
+
+# opkg update
+# opkg install kernel-module-hello
+
+-> don't worry about modules.dep warning !
+
+4- Reboot and check the automatic load of the module with the right parameter (42 !)
+
+# reboot

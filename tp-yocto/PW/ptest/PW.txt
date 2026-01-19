@@ -1,0 +1,28 @@
+Using ptest
+===========
+
+The goal of the exercise is to a build a very simple recipe including 'ptest' functionality and running on training-image.
+
+The recipe is based on the - famous - 'fahr' program (Celsius to Farenheit conversion) :-)
+
+We provide a data set (in files/ directory) in order to test the program with
+'ptest-runner'
+
+1- Replace the '???' in the provided recipe and add it to meta-training/recipes-core/fahr
+
+2- Add the following lines to conf/local.conf 
+
+IMAGE_INSTALL:append = " fahr"
+EXTRA_IMAGE_FEATURES += "ptest-pkgs"
+
+3- Build the new image
+
+$ bitbake training-image
+
+4- Test the new image on the board and try the unit testing script for 'fahr'
+
+$ runqemu training-image nographic
+
+# ptest-runner -l
+# ptest-runner fahr
+

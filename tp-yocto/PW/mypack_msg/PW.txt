@@ -1,0 +1,27 @@
+Recipe with local header file
+=============================
+
+In this exercise we use a more complex example that includes a header file (.h). The source code is given below. The MSG constant is defined in "message.h"
+
+#include <stdio.h>
+
+#include "message.h"
+ 
+int main(int argc, char* argv[])
+{
+   printf("%s\n", MSG);
+
+   return 0;
+}
+
+Work to be done:
+
+1- Using course material, complete the provided .bb skeleton (replace the '???') and build a correct directory for the recipe in 'meta-training/recipes-core'
+
+-> we will use a 'files' directory containing the 'message.h' file with the following line:
+
+#define MSG "my message"
+
+
+
+2- Install and test the produced package

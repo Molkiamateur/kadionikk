@@ -1,0 +1,24 @@
+Extending a recipe with .bbappend
+=================================
+
+The purpose of this exercise is to modify the mypack-msg package (previous exercise) by updating the
+displayed message (MSG constant in "message.h"), i.e. using a .bbappend in ANOTHER LAYER (meta-training2). 
+
+Work to be done:
+
+1- Copy the "mypack-msg" directory provided with the exercise to the 'meta-training2/recipes-core' directory
+
+2- Replace the '???' in the recipe + files/ directory
+
+3- Check the presence of .bbappend with the following command
+
+$ bitbake-layers show-appends | grep mypack
+
+4- Build the new package
+
+$ bitbake mypack-msg
+
+5- Upgrade the 'mypack-msg' package on the target and check the result
+
+# opkg update
+# opkg upgrade

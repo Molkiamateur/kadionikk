@@ -1,0 +1,45 @@
+Using testimage
+===============
+
+The goal of the exercise is to use 'testimage' with a very simple network test (ping + ssh) on training-image.
+
+1- Add the following lines to conf/local.conf 
+
+INHERIT += "testimage"
+TEST_SUITES = "ping ssh"
+
+2- Create 'tap0' interfaces and run the test
+
+-> You *MUST* stop the running QEMU *BEFORE* the test (with Ctrl-A X) !!
+
+$ bitbake qemu-helper-native
+$ sudo ../scripts/runqemu-gen-tapdevs 1000 1000 1 tmp/sysroots-components/x86_64/qemu-helper-native/usr/bin
+
+3- Try the following command from the PC
+
+$ bitbake -c testimage training-image
+
+4- Add the provided 'lib' directory to meta-training (a custom test), update conf/local.conf run the test
+
+TEST_SUITES = "ping ssh lsmod"
+
+-> "lsmod" test checks if the 'hello' module is loaded !
+
+$ bitbake -c testimage training-image
+
+5- Remove the 'hello-mod' package from training-image.bb and build a new image
+
+$ bitbake training-image
+
+6- Run the test again !
+
+$ bitbake -c testimage training-image
+
+You can check the results in 'log.do_testimage' :
+
+$ grep RESULTS tmp/work/qemuarm-poky-linux-gnueabi/training-image/1.0-r0/temp/log.do_testimage
+RESULTS:
+RESULTS - ping.PingTest.test_ping: PASSED (0.05s)
+RESULTS - ssh.SSHTest.test_ssh: PASSED (0.72s)
+RESULTS - lsmod.LsmodTest.test_lsmod: FAILED (0.46s) <--- 
+

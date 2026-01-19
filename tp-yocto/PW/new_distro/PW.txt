@@ -1,0 +1,26 @@
+Creating a new "distro"
+=======================
+
+The goal of the lab is to create a new "distro" called "ecs" and based on "poky".
+
+1- Add the distro definition in meta-training/conf/distro/<???>.conf
+
+The new distro is based on 'poky':
+
+require conf/distro/poky.conf      
+DISTRO = "???"
+DISTRO_NAME = "???"
+DISTRO_VERSION = "1.0"
+
+2- Update conf/local.conf to use the new distro
+
+DISTRO = "???"
+
+3- Build training-image for the new distro and test it
+
+$ bitbake training-image
+
+$ runqemu training-image
+
+-> explain the result !
+

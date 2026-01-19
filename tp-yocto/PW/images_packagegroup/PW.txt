@@ -1,0 +1,24 @@
+Creating a special image (with package group)
+=============================================
+
+The goal is to create the same image by using a 'package group' that will be installed in the meta-training/recipes-core/packagegroups directory.
+
+The image recipe will be installed in meta-training/recipes-core/images.
+
+We will use the same packages:
+
+- mypack-gen
+- mypack-auto
+- mypack-auto-lib
+- hello-mod
+
+We can build then test the image with the following commands:
+
+$ bitbake training-image-pg
+
+Now we can stop the QEMU emulator with 'Ctrl-A X' then start the new image:
+
+$ runqemu training-image-pg nographic
+
+
+

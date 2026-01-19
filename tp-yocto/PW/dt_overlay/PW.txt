@@ -1,0 +1,65 @@
+Adding a DT overlay
+===================
+
+The goal of this lab is to test a simple DT overlay to the target machine.
+
+
+Work to be done:
+
+1- Update the kernel configuration to add DT overlay support
+
+$ bitbake -c menuconfig virtual/kernel
+
+-> activate CONFIG_OF_OVERLAY in  "Device Drivers" / "Device Tree and Open Firmware support" / "Device Tree Overlays"
+
+$ bitbake virtual/kernel
+
+-> the right way should be to add a configuration 'fragment' !!
+
+2- Restart QEMU with the new kernel
+
+type Ctrl-A X to stop QEMU, then:
+
+$ runqemu nographic
+
+3- Add the provided recipes to meta-training/recipes-kernel, create then install the packages
+
+$ bitbake mydevice-dt <-- DT overlay example
+$ bitbake dtbocfg     <-- needed to add .dtbo using configfs
+$ bitbake package-index
+
+# opkg update
+# opkg install kernel-module-configfs
+# opkg install kernel-module-dtbocfg
+# opkg install mydevice-dt
+
+4- Test the DT overlay
+
+* Mount configfs
+
+# modprobe configfs
+# mount -t configfs none /sys/kernel/config
+
+* Load dtbocfg module
+
+# modprobe dtbocfg
+
+* Load overlay code
+
+# mkdir /sys/kernel/config/device-tree/overlays/mydevice
+# cat /boot/devicetree/mydevice.dtbo > /sys/kernel/config/device-tree/overlays/mydevice/dtbo <-- load the DT content
+
+* activate the overlay
+
+# echo 1 >  /sys/kernel/config/device-tree/overlays/mydevice/status  
+
+* check the result
+
+# cat /sys/firmware/devicetree/base/mydevice/string
+
+ OR
+
+# cat /proc/device-tree/mydevice/string
+
+hello device
+
