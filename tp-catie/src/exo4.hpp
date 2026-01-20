@@ -14,13 +14,13 @@ using namespace sixtron;
 #define PRESS_REG 0xF7
 #define HUM_REG 0xF5
 
-extern BME280 bme280;
+// extern BME280 bme280;
 extern I2C i2c;
-void read_temperature(BME280 bme280);
-void read_pressure(BME280 bme280);
-void read_humidity(BME280 bme280);
+// void read_temperature(BME280 bme280);
+// void read_pressure(BME280 bme280);
+// void read_humidity(BME280 bme280);
 
-void read_raw_temperature(I2C i2c);
-void read_raw_pressure(I2C i2c);
-void read_raw_humidity(I2C i2c);
+void read_raw_temperature(I2C *i2c);
+void read_raw_pressure(I2C *i2c);
+void read_raw_humidity(I2C *i2c);
 #endif

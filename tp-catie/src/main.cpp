@@ -54,16 +54,16 @@ namespace {
 int main()
 {
     I2C i2c(I2C1_SDA, I2C1_SCL);
-    BME280 bme280(&i2c);
-    if(!bme280.initialize()){
-        return 1;
-    }
-    bme280.set_sampling();
+    // BME280 bme280(&i2c);
+    // if(!bme280.initialize()){
+    //     return 1;
+    // }
+    // bme280.set_sampling();
 
     while (true) {
-        read_temperature(bme280);
-        read_humidity(bme280);
-        read_pressure(bme280);
+        read_raw_temperature(&i2c);
+        read_raw_humidity(&i2c);
+        read_raw_pressure(&i2c);
         ThisThread::sleep_for(PERIOD_MS / 2);
     }
 }
