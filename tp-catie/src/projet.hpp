@@ -18,14 +18,14 @@ using namespace sixtron;
 #define AIO_SERVER              "io.adafruit.com"
 #define AIO_SERVERPORT          1883
 #define AIO_USERNAME            "VayBar"
-//#define AIO_KEY                 "aio_Tyvt251amH0cN4fNMjjDT9MOtOE" // attention il faut ajouter un y a la fin de la clé
+//#define AIO_KEY                 "aio_Tyvt251amH0cN4fNMjjDT9MOtOE" // ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ attention il faut ajouter un "y" a la fin de la clé si pas de "y" ⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
 #define TOPIC_LED               AIO_USERNAME "/feeds/" GROUP_NAME ".led"
 #define TOPIC_TEMP              AIO_USERNAME "/feeds/" GROUP_NAME ".temperature"
 #define TOPIC_HUM               AIO_USERNAME "/feeds/" GROUP_NAME ".humidity"
 #define TOPIC_PRESS             AIO_USERNAME "/feeds/" GROUP_NAME ".pressure"
-#define TOPIC_EULER_X           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_x"
-#define TOPIC_EULER_Y           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_y"
-#define TOPIC_EULER_Z           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_z"
+#define TOPIC_EULER_X           AIO_USERNAME "/feeds/" GROUP_NAME ".euler-x"
+#define TOPIC_EULER_Y           AIO_USERNAME "/feeds/" GROUP_NAME ".euler-y"
+#define TOPIC_EULER_Z           AIO_USERNAME "/feeds/" GROUP_NAME ".euler-z"
 
 
 using namespace std::chrono;
