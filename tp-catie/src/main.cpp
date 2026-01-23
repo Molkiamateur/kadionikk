@@ -82,9 +82,9 @@ void messageArrived(MQTT::MessageData& md)
     printf("Payload %.*s\r\n", message.payloadlen, (char*)message.payload);
 
     // Get the payload string
-    char* char_payload = (char*)malloc((message.payloadlen+1)*sizeof(char)); // allocate the necessary size for our buffer
-    char_payload = (char *) message.payload; // get the arrived payload in our buffer
-    char_payload[message.payloadlen] = '\0'; // String must be null terminated
+    char char_payload[message.payloadlen + 1];
+    memcpy(char_payload, message.payload, message.payloadlen);
+    char_payload[message.payloadlen] = '\0';
 
     // Compare our payload with known command strings
     if (strcmp(char_payload, "ON") == 0) {
@@ -163,8 +163,9 @@ int main()
     //data.clientID.cstring = MQTT_CLIENT_ID;
     data.username.cstring = (char *)AIO_USERNAME;
     data.password.cstring = (char *)AIO_KEY;
-    if (client->connect(data) != 0){
-        printf("Connection to MQTT Broker Failed\n");
+    rc = client->connect(data);
+    if (rc != 0){
+        printf("Connection to MQTT Broker Failed, rc = %d\n", rc);
     }
 
     printf("Connected to MQTT broker\n");
