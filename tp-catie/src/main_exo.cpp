@@ -70,58 +70,17 @@ namespace {
 
 //  ============================================== exo5 ==============================================
 
-// #include "exo5.hpp"
+#include "exo5.hpp"
 
-// Thread thread_ping(osPriorityNormal);
-// Thread thread_pong(osPriorityNormal);
-// DigitalOut  myled(LED1);
-
-// int main()
-// {
-//     osThreadId_t main_id = ThisThread::get_id();
-//     thread_ping.start(ping);
-//     thread_pong.start(pong);
-//     osThreadSetPriority(main_id, osPriorityLow);
-//     while (true) {
-//         mainloop();
-//     }
-// }
-
-//  ============================================== exo6 ==============================================
-#include "exo6.hpp"
-
-Thread thread1(osPriorityNormal1);
-Thread thread2(osPriorityHigh);
-Thread thread3(osPriorityNormal);
-
-DigitalOut  led(LED1);
-DigitalIn   btn(BUTTON1);
-Param param;
+Thread thread_ping;
+Thread thread_pong;
+DigitalOut  myled(LED1);
 
 int main()
 {
-    osThreadId_t main_id = ThisThread::get_id();
-    osThreadSetPriority(main_id, osPriorityHigh2);
-
-    I2C i2c(I2C1_SDA, I2C1_SCL);
-    BME280 bme280(&i2c);
-    if(!bme280.initialize()){
-        return 1;
-    }
-    bme280.set_sampling();
-
-    led = 1;
-    param.bme280 = &bme280;
-    param.Btn = &btn;
-
-    thread1.start(callback(threadTempHum, &bme280));
-    thread2.start(callback(threadPress, &param));
-    thread3.start(callback(threadLED, &led));
-
-    osThreadSetPriority(main_id, osPriorityLow);
-
+    thread_ping.start(ping);
+    thread_pong.start(pong);
     while (true) {
-        printf("Rendez les bijoux !!\n");
-        ThisThread::sleep_for(10s);
+        mainloop();
     }
 }
