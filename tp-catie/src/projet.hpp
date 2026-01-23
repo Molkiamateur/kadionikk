@@ -15,7 +15,7 @@
 #define AIO_SERVER              "io.adafruit.com"
 #define AIO_SERVERPORT          1883
 #define AIO_USERNAME            "VayBar"
-#define AIO_KEY                 "aio_Tyvt251amH0cN4fNMjjDT9MOtO"
+//#define AIO_KEY                 "aio_Tyvt251amH0cN4fNMjjDT9MOtOE" // attention il faut ajouter un y a la fin de la clé
 #define TOPIC_LED               AIO_USERNAME "/feeds/" GROUP_NAME ".led"
 #define TOPIC_TEMP              AIO_USERNAME "/feeds/" GROUP_NAME ".temperature"
 #define TOPIC_HUM               AIO_USERNAME "/feeds/" GROUP_NAME ".humidity"

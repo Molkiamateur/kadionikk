@@ -93,6 +93,12 @@ void messageArrived(MQTT::MessageData& md)
     else if (strcmp(char_payload, "OFF") == 0) {
         led = 0;
     }
+    else if (strcmp(char_payload, "BLINK") == 0) {
+        for(int i = 0; i < 10; i++){
+            led = !led;
+            ThisThread::sleep_for(200ms);
+        }
+    }
     else if (strcmp(char_payload, "RESET") == 0) {
         printf("RESETTING ...\n");
         system_reset();
@@ -201,7 +207,7 @@ int main()
             publish(TOPIC_HUM, bme280.humidity());
             break;
         case 2:
-            publish(TOPIC_PRESS, bme280.pressure());
+            publish(TOPIC_PRESS, (bme280.pressure())/100);
             break;
         
         default:
