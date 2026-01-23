@@ -17,6 +17,7 @@
 #include "mbed.h"
 #include "rtos.h"
 #include "projet.hpp"
+#include <cmath>
 
 // main() runs in its own thread in the OS
 // (note the calls to ThisThread::sleep_for below for delays)
@@ -119,6 +120,12 @@ int main()
     }
     bme280.set_sampling();
 
+    BNO055 bno055(&i2c);
+    
+    if(!bno055.initialize()){
+        return 1;
+    }
+
     printf("Connecting to border router...\n");
 
     /* Get Network configuration */
@@ -192,7 +199,7 @@ int main()
 
     //main_queue.dispatch_forever();
 
-    int etape = 0; // 0 = temp, 1 = hum, 2 = press
+    int etape = 0; // 0 = temp, 1 = hum, 2 = press, 3 = euler_x, 4 = euler_y, 5 = euler_z
 
     while(true){
         yield();
@@ -209,12 +216,21 @@ int main()
         case 2:
             publish(TOPIC_PRESS, (bme280.pressure())/100);
             break;
+        case 3:
+            publish(TOPIC_EULER_X, bno055.euler().x * 180.0 / M_PI);
+            break;
+        case 4:
+            publish(TOPIC_EULER_Y, bno055.euler().y * 180.0 / M_PI);
+            break;
+        case 5:
+            publish(TOPIC_EULER_Z, bno055.euler().z * 180.0 / M_PI);
+            break;
         
         default:
             break;
         }
         etape++;
-        etape %= 3;
+        etape %= 6;
         ThisThread::sleep_for(2100ms);
     }
 }

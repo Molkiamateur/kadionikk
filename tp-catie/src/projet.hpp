@@ -6,6 +6,9 @@
 #include "rtos.h"
 #include <nsapi_dns.h>
 #include <MQTTClientMbedOs.h>
+#include "bno055.h"
+
+using namespace sixtron;
 
 
 #define GROUP_NAME              "my-board"
@@ -20,6 +23,9 @@
 #define TOPIC_TEMP              AIO_USERNAME "/feeds/" GROUP_NAME ".temperature"
 #define TOPIC_HUM               AIO_USERNAME "/feeds/" GROUP_NAME ".humidity"
 #define TOPIC_PRESS             AIO_USERNAME "/feeds/" GROUP_NAME ".pressure"
+#define TOPIC_EULER_X           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_x"
+#define TOPIC_EULER_Y           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_y"
+#define TOPIC_EULER_Z           AIO_USERNAME "/feeds/" GROUP_NAME ".euler_z"
 
 
 using namespace std::chrono;
@@ -30,5 +36,6 @@ using namespace sixtron;
 
 extern BME280 bme280;
 extern I2C i2c;
+extern BNO055 bno055;
 
 #endif
